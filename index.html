@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>진해고등학교 2027학년도 학교소개 & 교육과정 가이드</title>
+  <style>
+  
+:root {
+  --primary-navy: #1B3A6B;
+  --secondary-navy: #0F254A;
+  --accent-blue: #2E6DB4;
+  --light-blue: #EBF3FA;
+  --bg-main: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-sub: #F5F7FA;
+  --text-main: #222222;
+  --text-sub: #666666;
+  --text-muted: #888888;
+  --border-color: #E2E8F0;
+  --accent-red: #C0392B;
+  --accent-green: #27AE60;
+  --shadow-sm: 0 2px 6px rgba(27, 58, 107, 0.05);
+  --shadow-md: 0 4px 14px rgba(27, 58, 107, 0.08);
+  --shadow-lg: 0 8px 24px rgba(27, 58, 107, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", sans-serif;
+  background-color: var(--bg-sub);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 16px;
+  padding-bottom: 80px;
+}
+
+/* App Container */
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  position: relative;
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--primary-navy);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--light-blue);
+}
+
+.header-title-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.school-badge {
+  background: var(--primary-navy);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.header-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-header-icon {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--primary-navy);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* Content Area */
+.app-content {
+  flex: 1;
+  padding: 16px;
+}
+
+/* View Section */
+.view-section {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.view-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page Header */
+.page-title-box {
+  margin-bottom: 20px;
+}
+
+.page-category-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  line-height: 1.3;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-top: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Home Menu Grid */
+.home-hero {
+  background: linear-gradient(135deg, var(--primary-navy), var(--accent-blue));
+  border-radius: var(--radius-lg);
+  color: #fff;
+  padding: 22px 18px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.hero-desc {
+  font-size: 13.5px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.home-card-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  transition: all 0.2s ease;
+}
+
+.home-card-btn:active {
+  transform: scale(0.98);
+}
+
+.home-card-btn.featured {
+  grid-column: span 2;
+  background: linear-gradient(to right, #F8FAFC, #EDF4FB);
+  border: 1.5px solid var(--accent-blue);
+  flex-direction: row;
+  align-items: center;
+  min-height: 80px;
+}
+
+.card-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--light-blue);
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.home-card-btn.featured .card-icon-wrap {
+  margin-bottom: 0;
+  margin-right: 14px;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+
+.card-label-box {
+  flex: 1;
+}
+
+.card-badge-hot {
+  display: inline-block;
+  background: var(--accent-red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.card-label-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 2px;
+}
+
+.card-label-desc {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+/* Bottom Share Bar */
+.bottom-share-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border-color);
+  padding: 12px 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 90;
+}
+
+.btn-share {
+  flex: 1;
+  background: var(--primary-navy);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  height: 48px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(27, 58, 107, 0.2);
+}
+
+.btn-share:active {
+  transform: scale(0.98);
+}
+
+.btn-chatbot-float {
+  background: var(--light-blue);
+  color: var(--accent-blue);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  height: 48px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+/* Category Grid (Layer 2) */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.category-card {
+  background: #fff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-card:active {
+  background: var(--light-blue);
+  border-color: var(--accent-blue);
+  transform: scale(0.99);
+}
+
+.category-icon {
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.category-careers-preview {
+  font-size: 12.5px;
+  color: var(--text-sub);
+  margin-top: 3px;
+}
+
+/* Career Buttons */
+.career-btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.career-btn {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.career-btn:active {
+  background: var(--light-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Recommended Course Card */
+.course-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-blue);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.course-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.course-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.course-group-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--light-blue);
+  color: var(--accent-blue);
+}
+
+.course-reason {
+  font-size: 13.5px;
+  color: var(--text-sub);
+  line-height: 1.45;
+}
+
+/* Disclaimer Notice */
+.disclaimer-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #92400E;
+  line-height: 1.5;
+}
+
+/* Charts (CSS Horizontal Bar) */
+.chart-bar-group {
+  margin-bottom: 16px;
+}
+
+.chart-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.chart-bar-track {
+  height: 18px;
+  background: #EDF2F7;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--primary-navy));
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* KPI Summary 4 Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.kpi-card {
+  background: var(--bg-sub);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  text-align: center;
+}
+
+.kpi-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
+/* Dormitory Sub-Tabs */
+.sub-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.sub-tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+  position: relative;
+}
+
+.sub-tab-btn.active {
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+.sub-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-navy);
+}
+
+.sub-tab-pane {
+  display: none;
+}
+
+.sub-tab-pane.active {
+  display: block;
+}
+
+/* Table Style */
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13.5px;
+}
+
+.app-table th, .app-table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 8px;
+  text-align: left;
+}
+
+.app-table th {
+  background-color: var(--light-blue);
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.timeline-date {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin: 2px 0;
+}
+
+.timeline-desc {
+  font-size: 13.5px;
+  color: var(--text-sub);
+}
+
+/* Toast */
+.toast-msg {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 37, 74, 0.9);
+  color: #fff;
+  font-size: 13.5px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+}
+
+.toast-msg.show {
+  opacity: 1;
+}
+
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-left">
+        <button id="header-back-btn" class="back-btn" onclick="goBack()">←</button>
+        <div class="header-title-box">
+          <span class="school-badge">JINHAE 1944</span>
+          <span id="header-title-text" class="header-title">진해고 입학안내</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="tel:055-546-2260" class="btn-header-icon" title="전화상담">📞</a>
+        <button class="btn-header-icon" onclick="shareApp()" title="공유하기">🔗</button>
+      </div>
+    </header>
+
+    <main class="app-content">
+      <div id="view-home" class="view-section active">
+        
+<div class="home-hero">
+  <span class="hero-tag">2027학년도 신입생 전용</span>
+  <h2 class="hero-title">꿈을 향한 도전, 세계로의 비상<br>진해고등학교에 오신 것을 환영합니다</h2>
+  <p class="hero-desc">2026. 10. 22.(목) 18:30 본관 강당<br>입학설명회 공식 모바일 가이드</p>
+</div>
+
+<div class="home-grid">
+  <button class="home-card-btn featured" onclick="navigateTo('career')">
+    <div class="card-icon-wrap">🎯</div>
+    <div class="card-label-box">
+      <span class="card-badge-hot">핵심 추천</span>
+      <div class="card-label-title">진로별 과목 추천</div>
+      <div class="card-label-desc">희망 진로를 선택하면 3개년 필수 선택과목 자동 안내</div>
+    </div>
+    <span style="font-size:20px; color:var(--accent-blue);">➔</span>
+  </button>
+
+  <button class="home-card-btn" onclick="navigateTo('school')">
+    <div class="card-icon-wrap">🏫</div>
+    <div class="card-label-box">
+      <div class="card-label-title">학교 소개</div>
+      <div class="card-label-desc">진해고를 선택해야 하는 5가지 확실한 이유</div>
+    </div>
+  </button>
+
+  <button class="home-card-btn" onclick="navigateTo('records')">
+    <div class="card-icon-wrap">📊</div>
+    <div class="card-label-box">
+      <div class="card-label-title">진학 실적</div>
+      <div class="card-label-desc">2026학년도 대입 결과 (국립대 114명 등)</div>
+    </div>
+  </button>
+
+  <button class="home-card-btn" onclick="navigateTo('dormitory')">
+    <div class="card-icon-wrap">🏠</div>
+    <div class="card-label-box">
+      <div class="card-label-title">기숙사 안내</div>
+      <div class="card-label-desc">동백관(신입생 51명)·송학관 및 5시간 자습</div>
+    </div>
+  </button>
+
+  <button class="home-card-btn" onclick="navigateTo('curriculum')">
+    <div class="card-icon-wrap">📚</div>
+    <div class="card-label-box">
+      <div class="card-label-title">3개년 교육과정</div>
+      <div class="card-label-desc">선택군 A~G 및 100% 개설 보장 체계</div>
+    </div>
+  </button>
+
+  <button class="home-card-btn" onclick="navigateTo('clubs')">
+    <div class="card-icon-wrap">🎨</div>
+    <div class="card-label-box">
+      <div class="card-label-title">동아리·활동</div>
+      <div class="card-label-desc">생기부를 빛내는 45개 특화 동아리</div>
+    </div>
+  </button>
+
+  <button class="home-card-btn" onclick="navigateTo('schedule')">
+    <div class="card-icon-wrap">📅</div>
+    <div class="card-label-box">
+      <div class="card-label-title">입학 일정</div>
+      <div class="card-label-desc">원서접수, 합격자발표, 등록 타임라인</div>
+    </div>
+  </button>
+
+  <a class="home-card-btn featured" href="https://jinhae-bot2.vercel.app/" target="_blank" rel="noopener" style="text-decoration:none;">
+    <div class="card-icon-wrap">💬</div>
+    <div class="card-label-box">
+      <span class="card-badge-hot" style="background:#27AE60;">24시간 즉시</span>
+      <div class="card-label-title">AI 입학상담 챗봇</div>
+      <div class="card-label-desc">기숙사, 커트라인, 동아리 무엇이든 24시간 실시간 답변</div>
+    </div>
+    <span style="font-size:20px; color:#27AE60;">↗</span>
+  </a>
+</div>
+
+      </div>
+      <div id="view-career" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">STEP 1. 계열 및 진로 선택</div>
+  <h2 class="page-title">진로별 맞춤 선택과목 추천</h2>
+  <p class="page-subtitle">관심 있는 전공 계열을 선택하시면 추천 과목과 선택 이유를 확인하실 수 있습니다.</p>
+</div>
+
+<!-- Layer 2: 계열 목록 -->
+<div id="category-step" class="category-grid"></div>
+
+<!-- Layer 2.5: 직업 선택 -->
+<div id="careers-step" style="display:none;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <h3 id="selected-category-title" style="font-size:18px; font-weight:700; color:var(--primary-navy);"></h3>
+    <button onclick="backToCategoryStep()" style="background:none; border:none; color:var(--accent-blue); font-size:14px; font-weight:600; cursor:pointer;">← 계열 다시선택</button>
+  </div>
+  <p style="font-size:13.5px; color:var(--text-sub); margin-bottom:12px;">희망하시는 세부 전공 또는 직업을 선택해 주세요:</p>
+  <div id="career-btn-container" class="career-btn-list"></div>
+</div>
+
+<!-- Layer 3: 결과 화면 -->
+<div id="result-step" style="display:none;">
+  <div style="background:var(--light-blue); border-radius:var(--radius-md); padding:16px; margin-bottom:16px;">
+    <span style="font-size:12px; font-weight:700; color:var(--accent-blue);">추천 진로 로드맵</span>
+    <h3 id="result-career-name" style="font-size:20px; font-weight:800; color:var(--primary-navy); margin-top:2px;"></h3>
+    <p id="result-career-category" style="font-size:13px; color:var(--text-sub);"></p>
+  </div>
+
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-size:15px; font-weight:700; color:var(--primary-navy);">추천 이수 과목 (선택군별 정렬)</span>
+    <button onclick="backToCareersStep()" style="background:none; border:none; color:var(--accent-blue); font-size:13px; font-weight:600; cursor:pointer;">전공 다시 선택</button>
+  </div>
+
+  <div id="result-course-list"></div>
+
+  <div class="disclaimer-box">
+    <strong>📌 필독 안내:</strong><br>
+    이 추천은 참고 자료입니다. 실제 과목 선택은 1학년 1학기 교육과정 박람회와 담임·교육과정 전담교사 1:1 상담을 통해 결정합니다.
+  </div>
+</div>
+
+      </div>
+      <div id="view-school" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">ABOUT JINHAE HIGH</div>
+  <h2 class="page-title">진해고를 선택해야 하는<br>5가지 확실한 이유</h2>
+  <p class="page-subtitle">창원·진해 유일의 300명 규모 명문 남고의 압도적 경쟁력</p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--primary-navy);">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span style="background:var(--primary-navy); color:#fff; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">01</span>
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy);">남학생, 다수 인원으로 경쟁</h3>
+  </div>
+  <p style="font-size:14px; color:var(--text-sub);">
+    창원·김해 인근에서 <strong>정원 300명 이상의 유일한 남자고등학교</strong>입니다. 풍부한 내신 모수로 1등급(30명), 2등급(누적 102명) 자리가 넉넉하여 상위 등급을 안정적으로 확보할 수 있으며, 수행평가 부담에서 남녀공학 대비 절대적으로 유리합니다.
+  </p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--accent-blue);">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span style="background:var(--accent-blue); color:#fff; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">02</span>
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy);">수시와 정시를 함께 준비 (투트랙)</h3>
+  </div>
+  <p style="font-size:14px; color:var(--text-sub);">
+    수시 올인도, 정시 올인도 아닌 <strong>가장 강력한 수시·정시 투트랙 로드맵</strong>을 가동합니다. 정규 수업과 탐구 활동으로 학생부 종합·교과를 완성하고, 수능 연계 평가 문항과 기숙사 면학을 통해 수능최저 충족률을 극대화합니다.
+  </p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--accent-blue);">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span style="background:var(--accent-blue); color:#fff; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">03</span>
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy);">상위권 대학 진학 실적</h3>
+  </div>
+  <p style="font-size:14px; color:var(--text-sub);">
+    서울대(1), 의예·치의예·약학(5), 연고대(5), 서성한(12), 사관학교 8년 44명(해사 37명) 등 전국 유수 명문대 합격을 매년 연속 배출하는 전통의 입시 명문입니다.
+  </p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--primary-navy);">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span style="background:var(--primary-navy); color:#fff; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">04</span>
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy);">중위권 학생의 맞춤형 진학 성공</h3>
+  </div>
+  <p style="font-size:14px; color:var(--text-sub);">
+    상위권뿐만 아니라 중위권 학생들도 <strong>경남 지역인재전형과 맞춤형 생기부 설계</strong>를 통해 부산대(23), 경북대(15), 부경·경상국립·창원대(62) 등 거점 국립대 및 유망 학과로 대거 진학합니다.
+  </p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--accent-blue);">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span style="background:var(--accent-blue); color:#fff; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">05</span>
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy);">기숙사에서의 최고 교육 환경</h3>
+  </div>
+  <p style="font-size:14px; color:var(--text-sub);">
+    동백관(1·2학년)과 송학관(3학년) 2개동 분리 운영으로 <strong>매일 5시간 10분의 완벽한 자기주도학습 타임테이블</strong>을 확립합니다. 2027 신입생은 동백관에 51명이 배정됩니다.
+  </p>
+</div>
+
+<div class="card" style="background:#FAFBFD; margin-top:20px;">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:10px;">학교 기본 정보</h3>
+  <table class="app-table" style="background:#fff;">
+    <tr><th style="width:30%;">학교 유형</th><td>공립 일반고 (후기 / 남학교)</td></tr>
+    <tr><th>모집 정원</th><td>보통과 10학급 300명 (남학생)</td></tr>
+    <tr><th>학교 주소</th><td>(51684) 경남 창원시 진해구 여좌로 100</td></tr>
+    <tr><th>교무실</th><td><a href="tel:055-546-2260" style="color:var(--accent-blue); font-weight:700; text-decoration:none;">055-546-2260 (입학상담)</a></td></tr>
+    <tr><th>행정실</th><td>055-546-2361</td></tr>
+    <tr><th>공식 누리집</th><td><a href="https://jinhae-h.gne.go.kr" target="_blank" style="color:var(--accent-blue); text-decoration:none;">jinhae-h.gne.go.kr</a></td></tr>
+  </table>
+</div>
+
+      </div>
+      <div id="view-records" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">2026 ADMISSION OUTCOMES</div>
+  <h2 class="page-title">2026학년도 대입 진학 실적</h2>
+  <p class="page-subtitle">서울 주요대부터 거점 국립대까지 숫자로 증명하는 경쟁력</p>
+</div>
+
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-num">114<span style="font-size:16px;">명</span></div>
+    <div class="kpi-label">지역 국립대 합격</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num">50<span style="font-size:16px;">+명</span></div>
+    <div class="kpi-label">서울·수도권 주요대</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num">11<span style="font-size:16px;">명</span></div>
+    <div class="kpi-label">의약학 & 사관학교</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num">38<span style="font-size:16px;">명</span></div>
+    <div class="kpi-label">거점 국립대(부산/경북)</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:4px;">1. 지역 국립대 진학 (합계 114명)</h3>
+  <p style="font-size:12.5px; color:var(--text-sub); margin-bottom:14px;">"지역 국립대, 가장 많은 학생이 당당히 가는 길"</p>
+  
+  <div class="chart-bar-group">
+    <div class="chart-bar-label"><span>부경·경상국립·국립창원대</span><span>62명</span></div>
+    <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+  </div>
+  <div class="chart-bar-group">
+    <div class="chart-bar-label"><span>부산대학교</span><span>23명</span></div>
+    <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 37%;"></div></div>
+  </div>
+  <div class="chart-bar-group">
+    <div class="chart-bar-label"><span>경북대학교</span><span>15명</span></div>
+    <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 24%;"></div></div>
+  </div>
+  <div class="chart-bar-group">
+    <div class="chart-bar-label"><span>기타 국립대</span><span>9명</span></div>
+    <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 15%;"></div></div>
+  </div>
+  <div class="chart-bar-group">
+    <div class="chart-bar-label"><span>교육대학 (진주교대 등)</span><span>3명</span></div>
+    <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 5%;"></div></div>
+  </div>
+  <div class="chart-bar-group">
+    <div class="chart-bar-label"><span>과학기술원 (UNIST·DGIST)</span><span>2명</span></div>
+    <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 3.2%;"></div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:4px;">2. 서울·수도권 주요 대학</h3>
+  <p style="font-size:12.5px; color:var(--text-sub); margin-bottom:14px;">상위권 명문대 고른 합격 분포</p>
+  
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:13.5px;">
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">성균관대: <strong>5명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">한양대: <strong>4명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">중앙대: <strong>4명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">고려대: <strong>3명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">서강대: <strong>3명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">연세대: <strong>2명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">건국대/시립대: <strong>2명</strong></div>
+    <div style="background:var(--bg-sub); padding:8px 10px; border-radius:6px;">기타 서울·경기: <strong>17명</strong></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:4px;">3. 최상위 & 의약계열</h3>
+  <div style="display:flex; justify-content:space-around; text-align:center; padding:10px 0;">
+    <div><div style="font-size:22px; font-weight:800; color:var(--primary-navy);">1명</div><div style="font-size:12px; color:var(--text-sub);">서울대</div></div>
+    <div><div style="font-size:22px; font-weight:800; color:var(--primary-navy);">4명</div><div style="font-size:12px; color:var(--text-sub);">의예·치의예</div></div>
+    <div><div style="font-size:22px; font-weight:800; color:var(--primary-navy);">1명</div><div style="font-size:12px; color:var(--text-sub);">약학대</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:4px;">4. 사관학교 8개년 누계 (총 44명)</h3>
+  <p style="font-size:12.5px; color:var(--text-sub); margin-bottom:12px;">"해군의 도시 진해의 자긍심을 잇는 전통 명문고"</p>
+  <div style="display:flex; justify-content:space-around; text-align:center;">
+    <div><div style="font-size:20px; font-weight:800; color:var(--accent-blue);">37명</div><div style="font-size:12px; color:var(--text-sub);">해군사관학교</div></div>
+    <div><div style="font-size:20px; font-weight:800; color:var(--accent-blue);">4명</div><div style="font-size:12px; color:var(--text-sub);">육군사관학교</div></div>
+    <div><div style="font-size:20px; font-weight:800; color:var(--accent-blue);">3명</div><div style="font-size:12px; color:var(--text-sub);">공군사관학교</div></div>
+  </div>
+</div>
+
+<p style="font-size:12px; color:var(--text-muted); line-height:1.4; padding:0 4px;">
+  ※ 합격자 수 기준(중복 합격 포함), 재수생 일부 포함
+</p>
+
+      </div>
+      <div id="view-dormitory" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">CAMPUS LIFE</div>
+  <h2 class="page-title">기숙사 안내 (동백관 & 송학관)</h2>
+  <p class="page-subtitle">매일 5시간 10분의 흔들림 없는 면학 환경</p>
+</div>
+
+<div class="sub-tabs">
+  <button class="sub-tab-btn active" onclick="switchDormTab('tab-dorm-overview')">시설 및 일과</button>
+  <button class="sub-tab-btn" onclick="switchDormTab('tab-dorm-admission')">신입생 선발</button>
+  <button class="sub-tab-btn" onclick="switchDormTab('tab-dorm-programs')">특화 프로그램</button>
+</div>
+
+<div id="tab-dorm-overview" class="sub-tab-pane active">
+  <div class="card">
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">동백관 vs 송학관 2개동 분리 운영</h3>
+    <table class="app-table">
+      <tr><th>구분</th><th>동백관 (1·2학년)</th><th>송학관 (3학년)</th></tr>
+      <tr><td>수용 규모</td><td><strong>117명</strong> (2027 신입 51명)</td><td><strong>36명</strong></td></tr>
+      <tr><td>호실 구조</td><td>1실 3인실</td><td>1실 2인실</td></tr>
+      <tr><td>운영 목표</td><td>고교 적응 + 5시간 자습 루틴</td><td>수험생 맞춤 몰입 환경</td></tr>
+      <tr><td>학습 환경</td><td>전용 자습실, 소집단 토론룸</td><td>수능 집중 정독실</td></tr>
+      <tr><td>복지 편의</td><td>체력단련실, 세탁실, 북카페</td><td>집중 독서실, 샤워실</td></tr>
+    </table>
+    <div style="font-size:12.5px; color:var(--text-muted); text-align:right;">총 수용 153명 / 2개동 완전 분리 운영</div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">Daily 310분(5시간 10분) 자기주도학습</h3>
+    <p style="font-size:13px; color:var(--text-sub); margin-bottom:12px;">흐트러짐 없이 이어지는 규칙적인 학습 루틴</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">07:30 ~ 08:20 (50분)</div>
+        <div class="timeline-title">아침 자습</div>
+        <div class="timeline-desc">두뇌를 깨우는 하루 시작 몰입 학습</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">18:30 ~ 21:00 (150분)</div>
+        <div class="timeline-title">교실 야간 자습</div>
+        <div class="timeline-desc">담임교사 직접 상주 감독하에 진행되는 정숙 학습</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">21:40 ~ 23:30 (110분)</div>
+        <div class="timeline-title">기숙사 심야 자습</div>
+        <div class="timeline-desc">기숙사 전용 자습실에서 취약 과목 마무리 및 질의응답</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tab-dorm-admission" class="sub-tab-pane">
+  <div class="card">
+    <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:6px;">2027학년도 신입생 선발 기준 (총 51명)</h3>
+    <p style="font-size:13px; color:var(--text-sub); margin-bottom:14px;">신입생은 100% 동백관(쾌적한 3인 1실)에 배정됩니다.</p>
+    
+    <div style="background:var(--bg-sub); padding:12px; border-radius:8px; margin-bottom:10px;">
+      <div style="font-size:14px; font-weight:700; color:var(--primary-navy);">1. 우선 선발</div>
+      <ul style="font-size:13px; color:var(--text-sub); margin-left:18px; margin-top:4px;">
+        <li><strong>[관내]</strong> 진해 지역(용원·웅동·웅천 제외) 중학교 3개년 내신 석차백분율 <strong>5% 이내</strong></li>
+        <li><strong>[관외]</strong> 창원·마산·김해 및 용원·웅동·웅천 포함 <strong>30% 이내</strong></li>
+        <li><strong>[사회적 배려]</strong> 기초수급·차상위·국가유공자·다문화 가정 등</li>
+      </ul>
+    </div>
+
+    <div style="background:var(--bg-sub); padding:12px; border-radius:8px; margin-bottom:10px;">
+      <div style="font-size:14px; font-weight:700; color:var(--primary-navy);">2. 일반 선발</div>
+      <p style="font-size:13px; color:var(--text-sub); margin-top:4px;">
+        우선 선발 정원 외 잔여 인원에 대해 중학교 3개년 내신 석차백분율 성적순으로 선발합니다.
+      </p>
+    </div>
+
+    <div style="font-size:12.5px; color:var(--text-muted); margin-top:10px;">
+      ※ 1학년 2학기부터는 매 학기 직전 학기 모의고사 + 내신 성적을 종합 평가하여 공정하게 재선발합니다.
+    </div>
+  </div>
+</div>
+
+<div id="tab-dorm-programs" class="sub-tab-pane">
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+      <span style="font-size:18px;">💡</span>
+      <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy);">기숙사 창의주제 탐구 학술제</h3>
+    </div>
+    <p style="font-size:13.5px; color:var(--text-sub);">
+      심야 자습 시간을 활용하여 자신의 희망 전공과 관련된 소논문형 심화 보고서를 작성하고 학술제에서 발표하는 대표 학생부 강화 활동입니다.
+    </p>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+      <span style="font-size:18px;">🤝</span>
+      <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy);">선후배 1:1 학습 멘토-멘티</h3>
+    </div>
+    <p style="font-size:13.5px; color:var(--text-sub);">
+      송학관 3학년 선배들과 동백관 1·2학년 후배들을 전공별로 1:1 매칭하여 과목별 공부법, 수행평가 비결, 멘탈 관리를 전수합니다.
+    </p>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+      <span style="font-size:18px;">🎯</span>
+      <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy);">사제동행 진로·진학 밀착 컨설팅</h3>
+    </div>
+    <p style="font-size:13.5px; color:var(--text-sub);">
+      전담 사감 교사 및 진학 전문 교사진이 정기적으로 기숙사에 상주하며 모의고사 성적 추이 분석 및 1:1 수시 지원 포트폴리오를 점검합니다.
+    </p>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+      <span style="font-size:18px;">📚</span>
+      <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy);">주말 수능·수시 심화 클리닉</h3>
+    </div>
+    <p style="font-size:13.5px; color:var(--text-sub);">
+      주말 시간을 활용하여 수학·과학 킬러 문항 특강 및 주요 대학 인문·자연 논술, 심층 구술면접 대비 강좌를 맞춤형으로 운영합니다.
+    </p>
+  </div>
+</div>
+
+      </div>
+      <div id="view-curriculum" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">2022 REVISED CURRICULUM</div>
+  <h2 class="page-title">3개년 교육과정 편성 체계</h2>
+  <p class="page-subtitle">총 192학점(교과 174 + 창체 18) 미래형 학생 맞춤 설계</p>
+</div>
+
+<div class="card" style="background:linear-gradient(to right, #FAF5FF, #F3E8FF); border:1px solid #D8B4FE;">
+  <div style="font-size:14px; font-weight:700; color:#6B21A8; margin-bottom:4px;">진해고 과목 개설 철학</div>
+  <p style="font-size:13.5px; color:#581C87; line-height:1.5;">
+    <strong>"학생의 진로에 필요한 과목이라면 단 한 명을 위해서라도 개설합니다."</strong><br>
+    수강생이 10명 미만이라도 소인수 과목으로 적극 개설하여 학생부 종합전형에서 타 학교와 차별화된 과목 이수력을 완성합니다.
+  </p>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">3개년 이수 로드맵</h3>
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <div style="background:var(--bg-sub); padding:10px 12px; border-radius:6px; border-left:3px solid var(--primary-navy);">
+      <div style="font-size:14px; font-weight:700; color:var(--primary-navy);">1학년: 공통 기초 소양 (100% 공통)</div>
+      <div style="font-size:12.5px; color:var(--text-sub);">국·수·영·한국사·통합사회·통합과학·과탐실 (기초 소양 완비)</div>
+    </div>
+    <div style="background:var(--bg-sub); padding:10px 12px; border-radius:6px; border-left:3px solid var(--accent-blue);">
+      <div style="font-size:14px; font-weight:700; color:var(--primary-navy);">2학년: 일반 및 진로 선택 (선택군 A~D)</div>
+      <div style="font-size:12.5px; color:var(--text-sub);">인문·사회, 자연·공학 계열별 필수 전공 기초 과목 본격 이수</div>
+    </div>
+    <div style="background:var(--bg-sub); padding:10px 12px; border-radius:6px; border-left:3px solid #27AE60;">
+      <div style="font-size:14px; font-weight:700; color:var(--primary-navy);">3학년: 심화 및 융합 선택 (선택군 E~G)</div>
+      <div style="font-size:12.5px; color:var(--text-sub);">고급 과학, 미적분Ⅱ, 융합 탐구 등 대입 학생부 완성 심화 교과</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">선택 과목군 (A~G) 요약표</h3>
+  <table class="app-table">
+    <tr><th>선택군</th><th>이수시기</th><th>학점</th><th>개설 과목수</th></tr>
+    <tr><td><strong>선택군A</strong></td><td>2학년 1학기</td><td>9</td><td>8과목 중 택3</td></tr>
+    <tr><td><strong>선택군B</strong></td><td>2학년 1학기</td><td>3</td><td>4과목 중 택1 (데이터과학 신설)</td></tr>
+    <tr><td><strong>선택군C</strong></td><td>2학년 2학기</td><td>3</td><td>5과목 중 택1</td></tr>
+    <tr><td><strong>선택군D</strong></td><td>2학년 2학기</td><td>9</td><td>8과목 중 택3</td></tr>
+    <tr><td><strong>선택군E</strong></td><td>3학년 1학기</td><td>12</td><td><strong>19과목 통합</strong> (자율 택4)</td></tr>
+    <tr><td><strong>선택군F</strong></td><td>3학년 2학기</td><td>12</td><td>5과목 중 택3</td></tr>
+    <tr><td><strong>선택군G</strong></td><td>3학년 연계</td><td>4</td><td>3과목 중 택1</td></tr>
+  </table>
+  <div style="font-size:12.5px; color:var(--text-muted); margin-top:8px;">
+    ※ 3학년 1학기 선택군E는 기초(국수영)와 탐구(사회과학) 19과목을 통합 개설하여 진로 맞춤 선택권을 최대화하였습니다.
+  </div>
+</div>
+
+      </div>
+      <div id="view-clubs" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">CREATIVE ACTIVITIES</div>
+  <h2 class="page-title">45개 특화 창체·자율 동아리</h2>
+  <p class="page-subtitle">자신의 지적 호기심과 전공 적합성을 입증하는 활동</p>
+</div>
+
+<div class="card" style="border-left:4px solid #2980B9;">
+  <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy); margin-bottom:6px;">1. 수리·과학·의약학 영역 (12개)</h3>
+  <p style="font-size:13px; color:var(--text-sub); line-height:1.6;">
+    사이언스랩(심화 과학실험), 메디컬연구반(의약학 심화 탐구), 수학탐구반(수리논술), IT프로그래밍클럽(SW·알고리즘), AI융합동아리, 화학공학탐구반, 생명과학연구회, 물리역학연구반, 바이오메이커스 등
+  </p>
+</div>
+
+<div class="card" style="border-left:4px solid #E67E22;">
+  <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy); margin-bottom:6px;">2. 인문·사회·경영 영역 (11개)</h3>
+  <p style="font-size:13px; color:var(--text-sub); line-height:1.6;">
+    시사토론반, 모의유엔(MUN), 경제경영연구회, 방송언론반(JBS), 인문학독서토론반, 역사지리탐구반, 사회정의연구회, 글로벌리더십클럽, 교육학탐구반 등
+  </p>
+</div>
+
+<div class="card" style="border-left:4px solid #27AE60;">
+  <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy); margin-bottom:6px;">3. 문화·예술·스포츠 영역 (12개)</h3>
+  <p style="font-size:13px; color:var(--text-sub); line-height:1.6;">
+    관악오케스트라(전통의 관악합주단), 밴드부(장복제 피날레 공연), 축구부, 농구부, 배드민턴부, 연극반, 미술창작동아리, 영상제작동아리, 사진동아리 등
+  </p>
+</div>
+
+<div class="card" style="border-left:4px solid #8E44AD;">
+  <h3 style="font-size:15px; font-weight:700; color:var(--primary-navy); margin-bottom:6px;">4. 자율 융합 동아리 (10개)</h3>
+  <p style="font-size:13px; color:var(--text-sub); line-height:1.6;">
+    드론비행 및 공간정보 탐구반, 친환경 메이커스, 사회공헌 및 지역사회 문제해결(솔루션), 인공지능 윤리 포럼, 학생 주도 자율 R&E 연구회 등
+  </p>
+</div>
+
+      </div>
+      <div id="view-schedule" class="view-section">
+        
+<div class="page-title-box">
+  <div class="page-category-label">ADMISSION TIMELINE</div>
+  <h2 class="page-title">2027학년도 입학 전형 일정</h2>
+  <p class="page-subtitle">경상남도교육청 승인 확정 공식 전형 일정 안내</p>
+</div>
+
+<div class="card">
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2026. 12. 10.(목) 10:00 ~ 12. 14.(월) 14:00</div>
+      <div class="timeline-title">원서 접수</div>
+      <div class="timeline-desc">고입전형지원 온라인시스템을 통해 접수 (마감시간 이후 접수 절대 불가)</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2026. 12. 30.(수) 10:00</div>
+      <div class="timeline-title">합격자 발표</div>
+      <div class="timeline-desc">고입전형지원시스템 및 진해고등학교 누리집 공고</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">~ 2027. 1. 4.(월) 16:30까지</div>
+      <div class="timeline-title">입학등록 확인서 제출</div>
+      <div class="timeline-desc">진해고 본관 2층 교무실 제출 (온라인 접수, 인편, 팩스 가능)</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2027년 1월 초</div>
+      <div class="timeline-title">기숙사 배정 공고</div>
+      <div class="timeline-desc">동백관 신입생(51명) 선발 결과 누리집 공고 및 개별 안내</div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="background:#FEF2F2; border:1.5px solid #F87171;">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span style="font-size:18px;">⚠️</span>
+    <h3 style="font-size:15px; font-weight:700; color:#991B1B;">신입생 예비소집일 미실시 안내</h3>
+  </div>
+  <p style="font-size:13.5px; color:#B91C1C; line-height:1.5;">
+    <strong>신입생 예비소집일은 미실시합니다.</strong> 등록확인서 제출로 입학 등록이 최종 완료되며, 별도의 학생 등교일은 없습니다. 학부모님과 학생 여러분께서는 착오 없으시기 바랍니다.
+  </p>
+</div>
+
+<div class="card">
+  <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">전형 방법 핵심 요약</h3>
+  <ul style="font-size:13.5px; color:var(--text-sub); margin-left:18px; line-height:1.6;">
+    <li><strong>사정 방법:</strong> 중학교 3개년 내신성적(석차연명부의 석차백분율) 100% 반영</li>
+    <li><strong>입학 전형료:</strong> 없음 (전액 면제)</li>
+    <li><strong>정원 외 선발:</strong> 국가유공자 자녀 등 교육지원대상자 9명, 특례입학대상자 9명</li>
+    <li><strong>문의 전화:</strong> 055-546-2260 (입학전형 담당 교무실 직통)</li>
+  </ul>
+</div>
+
+      </div>
+    </main>
+
+    <div class="bottom-share-bar">
+      <button class="btn-share" onclick="shareApp()">
+        <span>📤 입학안내 웹앱 공유하기</span>
+      </button>
+      <a href="https://jinhae-bot2.vercel.app/" target="_blank" rel="noopener" class="btn-chatbot-float">
+        <span>AI 챗봇 💬</span>
+      </a>
+    </div>
+
+    <div id="toast" class="toast-msg">링크가 클립보드에 복사되었습니다!</div>
+  </div>
+
+  <script>
+  
+    const CAREER_DATA = {"의약·보건": {"의예과(의사)": [{"subject": "화학·생명과학", "group": "A", "reason": "인체 생리 및 약리 작용의 기본 원리를 이해하는 핵심 기초"}, {"subject": "기하", "group": "C", "reason": "의료 영상 기기(MRI, CT) 및 3차원 생체 역학 분석 역량"}, {"subject": "물질과 에너지·세포와 물질대사", "group": "D", "reason": "세포 수준의 대사 과정과 생체 에너지 변환 심화 학습"}, {"subject": "미적분Ⅱ·화학 반응의 세계·생물의 유전", "group": "E", "reason": "의학 연구 필수 미적분 모델링 및 유전체·분자생물학 분석"}, {"subject": "융합과학 탐구", "group": "F", "reason": "의생명 첨단 기술 및 현대 의료 임상 융합 연구"}], "치의예과(치과의사)": [{"subject": "화학·생명과학", "group": "A", "reason": "구강 생물학 및 치과 재료화학 기초 소양"}, {"subject": "기하", "group": "C", "reason": "치과 보철 및 안면 구조 3D 공간 지각 역량"}, {"subject": "물질과 에너지·세포와 물질대사", "group": "D", "reason": "치아 및 골조직 대사 메커니즘 분석"}, {"subject": "화학 반응의 세계·생물의 유전", "group": "E", "reason": "생체 적합 물질 합성 반응 및 구강 미생물 유전학 탐구"}], "약학과(약사/신약개발)": [{"subject": "화학·생명과학", "group": "A", "reason": "약물 구조 및 생체 표적 작용 메커니즘 기본 이해"}, {"subject": "물질과 에너지·세포와 물질대사", "group": "D", "reason": "약물 대사 및 체내 동태학 심화 탐구"}, {"subject": "화학 반응의 세계·고급 화학", "group": "E", "reason": "유기 합성 반응 및 신약 분자 설계 심화"}], "간호학과(간호사)": [{"subject": "화학·생명과학", "group": "A", "reason": "인체 생리학 및 기초 병리학 이해를 위한 필수 과학 소양"}, {"subject": "세포와 물질대사", "group": "D", "reason": "인체 면역 및 대사 질환 간호 중재 심화 학습"}, {"subject": "생물의 유전·기후변화와 환경생태", "group": "E", "reason": "감염병 역학 및 유전 질환 환자 맞춤형 간호 탐구"}]}, "공학·IT": {"기계공학자": [{"subject": "물리학", "group": "A", "reason": "힘과 운동, 역학 시스템 해석의 필수 전공 기초"}, {"subject": "기하", "group": "C", "reason": "기계 설계, 로봇 기구학 및 3차원 공간 좌표 역량"}, {"subject": "역학과 에너지", "group": "D", "reason": "동역학, 열역학 및 기계 시스템 에너지 해석 심화"}, {"subject": "미적분Ⅱ·전자기와 양자·고급 물리학", "group": "E", "reason": "공학 해석 필수 미적분 및 양자/전자기 고급 물리 탐구"}], "전기전자공학자": [{"subject": "물리학·화학", "group": "A", "reason": "전자기 현상 및 반도체 재료 물성의 기초 원리"}, {"subject": "기하", "group": "C", "reason": "전자기장 벡터 해석 및 회로 공간 설계"}, {"subject": "역학과 에너지", "group": "D", "reason": "에너지 변환 시스템 및 전자 소자 동역학 탐구"}, {"subject": "미적분Ⅱ·전자기와 양자·고급 물리학", "group": "E", "reason": "맥스웰 방정식, 회로 제어 및 반도체 물리 심화"}], "컴퓨터공학/SW개발자": [{"subject": "물리학", "group": "A", "reason": "컴퓨팅 하드웨어 물리 원리 및 시스템 모델링"}, {"subject": "데이터 과학", "group": "B", "reason": "빅데이터 전처리, 알고리즘 구현 및 통계적 데이터 분석"}, {"subject": "기하", "group": "C", "reason": "컴퓨터 그래픽스, 비전 및 공간 알고리즘 기초"}, {"subject": "미적분Ⅱ·고급 물리학", "group": "E", "reason": "머신러닝 최적화 수리 이론 및 고성능 컴퓨팅 탐구"}], "인공지능(AI)전문가": [{"subject": "데이터 과학", "group": "B", "reason": "인공지능 모델 학습 파이프라인 및 데이터 마이닝"}, {"subject": "기하", "group": "C", "reason": "다차원 텐서 연산 및 딥러닝 임베딩 공간 이해"}, {"subject": "미적분Ⅱ", "group": "E", "reason": "경사하강법 및 역전파 알고리즘 수리 해석"}], "우주항공공학자": [{"subject": "물리학", "group": "A", "reason": "공기역학 및 궤도역학 필수 기초"}, {"subject": "기하", "group": "C", "reason": "비행체 형상 설계 및 궤도 기하학"}, {"subject": "역학과 에너지", "group": "D", "reason": "추진 시스템 및 유체역학 심화"}, {"subject": "미적분Ⅱ·행성우주과학·고급 물리학", "group": "E", "reason": "우주선 궤도 천체역학 및 첨단 항공역학 심화"}], "조선해양공학자": [{"subject": "물리학·화학", "group": "A", "reason": "선박 부력/복원성 물리 및 해양 환경 부식 화학"}, {"subject": "역학과 에너지", "group": "D", "reason": "선체 저항 추진 및 해양 구조물 역학 심화"}]}, "자연과학": {"물리학 연구원": [{"subject": "물리학", "group": "A", "reason": "고전역학, 전자기학 등 현대 물리학 전반의 기저"}, {"subject": "기하", "group": "C", "reason": "다변수 공간 벡터 해석 및 좌표 변환"}, {"subject": "역학과 에너지", "group": "D", "reason": "에너지 보존 법칙 및 라그랑주 역학 기초 탐구"}, {"subject": "미적분Ⅱ·전자기와 양자·고급 물리학", "group": "E", "reason": "양자역학 및 전자기학 이론의 수학적 모델링"}], "화학 연구원": [{"subject": "화학·물리학", "group": "A", "reason": "원자 구조 및 화학 결합 이론의 기초"}, {"subject": "물질과 에너지", "group": "D", "reason": "화학 열역학 및 물질 상태 변화 심화"}, {"subject": "화학 반응의 세계·고급 화학", "group": "E", "reason": "화학 반응 속도론, 평형 및 유기·무기 합성 심화"}], "생명과학 연구원": [{"subject": "화학·생명과학", "group": "A", "reason": "생화학적 생명 현상과 분자생물학 기본 소양"}, {"subject": "세포와 물질대사", "group": "D", "reason": "효소 반응 메커니즘 및 유전자 발현 조절 심화"}, {"subject": "생물의 유전·고급 생명과학", "group": "E", "reason": "유전공학, 생명정보학 및 현대 생명과학 심화 연구"}], "수학/통계 연구원": [{"subject": "기하·경제 수학", "group": "C", "reason": "순수 기하학적 논증 및 수학의 실세계 응용 모델링"}, {"subject": "미적분Ⅱ", "group": "E", "reason": "해석학 기초 및 미분방정식 이론 탐구"}]}, "인문·사회": {"경영자/기업가": [{"subject": "사회와 문화", "group": "A", "reason": "사회 구조 및 소비자 집단 행동 양식 분석"}, {"subject": "경제 수학", "group": "C", "reason": "경영 의사결정, 수익 최적화 및 재무 데이터 분석"}, {"subject": "법과 사회", "group": "D", "reason": "상법, 기업 규제 및 계약 법률 환경 이해"}, {"subject": "경제·사회문제 탐구", "group": "E", "reason": "시장 경제 메커니즘 및 ESG 경영 과제 분석"}], "경제/금융 전문가": [{"subject": "사회와 문화", "group": "A", "reason": "거시 사회 변동과 경제 주체의 상호작용 이해"}, {"subject": "경제 수학", "group": "C", "reason": "이자율, 연금, 파생상품의 수학적 수리 모델링"}, {"subject": "미적분Ⅱ·경제", "group": "E", "reason": "미시·거시 계량경제학 및 수리 금융 분석"}], "변호사/법조인": [{"subject": "사회와 문화·현대사회와 윤리", "group": "A", "reason": "법의 사회적 기능 및 정의론적 윤리적 기초"}, {"subject": "법과 사회·윤리와 사상", "group": "D", "reason": "헌법, 민법, 형법 체계 및 법철학적 쟁점 심화"}, {"subject": "정치·사회문제 탐구", "group": "E", "reason": "입법 과정, 권력 분립 및 사회 갈등 법적 해결 탐구"}], "언론인/PD/방송작가": [{"subject": "문학과 영상", "group": "C", "reason": "스토리텔링, 영상 문법 및 미디어 콘텐츠 비평"}, {"subject": "사회와 문화·현대사회와 윤리", "group": "A", "reason": "저널리즘 윤리 및 사회 이슈 심층 취재 역량"}, {"subject": "독서 토론과 글쓰기·미디어 영어·사회문제 탐구", "group": "E", "reason": "비판적 기사 작성, 글로벌 미디어 분석 및 탐사 보도"}], "외교관/국제기구 종사자": [{"subject": "세계사·세계시민과 지리", "group": "A", "reason": "국제 정세 이해를 위한 역사적 배경과 지리적 지정학"}, {"subject": "일본어·중국어", "group": "B", "reason": "동아시아 다자 외교를 위한 전략 외국어 구사력"}, {"subject": "세계 문화와 영어", "group": "C", "reason": "다문화 감수성 및 글로벌 의제 소통 능력"}, {"subject": "정치·역사로 탐구하는 현대 세계", "group": "E", "reason": "국제 정치 체제 및 현대 분쟁사 심층 분석"}, {"subject": "국제 관계의 이해", "group": "F", "reason": "외교 정책 결정론 및 다자간 외교 협상 실전 연구"}]}, "교육": {"초등교사(교대)": [{"subject": "세계시민과 지리·사회와 문화·물리학·생명과학", "group": "A", "reason": "초등 전 교과(국·수·사·과) 균형 지도를 위한 폭넓은 교양"}, {"subject": "문학과 영상", "group": "C", "reason": "초등 아동 문학 및 영상 매체 활용 교수 역량"}, {"subject": "사회문제 탐구·독서 토론과 글쓰기", "group": "E", "reason": "다문화·학습격차 교육 복지 탐구 및 독서 지도법"}, {"subject": "교육의 이해", "group": "G", "reason": "초등 교육학 개론, 아동 발달 심리 및 교육철학 탐구"}], "국어교사": [{"subject": "문학과 영상", "group": "C", "reason": "매체 문학 교육 및 서사 창작 지도 역량"}, {"subject": "독서 토론과 글쓰기", "group": "E", "reason": "과정 중심 독서·작문 교수학습 및 서논술형 평가 설계"}, {"subject": "언어생활과 한자", "group": "B", "reason": "어휘 지도력 및 국어 어원 탐구"}], "과학교사": [{"subject": "물리학·화학·생명과학·지구과학", "group": "A", "reason": "중등 공통과학 및 융합형 과학교육 지도력"}, {"subject": "융합과학 탐구·과학의 역사와 문화", "group": "F", "reason": "과학사적 탐구 맥락 및 학생 주도 실험 수업 설계"}, {"subject": "교육의 이해", "group": "G", "reason": "과학과 교육과정 재구성 및 평가 루브릭 개발"}]}, "사관학교·군": {"해군사관학교(해군장교)": [{"subject": "물리학", "group": "A", "reason": "함정 추진, 소나 음향 및 해양 역학의 기초"}, {"subject": "기하", "group": "C", "reason": "해상 항행 항법 및 3차원 전술 레이더 기하학"}, {"subject": "역학과 에너지", "group": "D", "reason": "해양 무기 체계 및 함정 구조 역학 심화"}, {"subject": "미적분Ⅱ·고급 물리학", "group": "E", "reason": "사관학교 1차 필기(수학) 고득점 및 무기체계 탄도학"}, {"subject": "국제 관계의 이해", "group": "F", "reason": "해양 안보 및 배타적경제수역(EEZ) 국제 해양법"}], "공군사관학교(조종사)": [{"subject": "물리학", "group": "A", "reason": "항공 역학 및 대기 비행 기초 물리"}, {"subject": "기하", "group": "C", "reason": "공중 기동 좌표계 및 3차원 공간 항법"}, {"subject": "역학과 에너지·지구시스템과학", "group": "D", "reason": "항공기 추진 엔진 및 대기 기상 관측 심화"}, {"subject": "미적분Ⅱ·행성우주과학·고급 물리학", "group": "E", "reason": "공사 1차 수학 극복 및 항공우주 무기체계 연구"}], "육군사관학교(육군장교)": [{"subject": "물리학·세계사", "group": "A", "reason": "전장 환경 분석 및 군사 전략사 기초"}]}, "과학기술원": {"반도체/첨단신소재 연구원": [{"subject": "물리학·화학", "group": "A", "reason": "고체물리 및 결정학 기초 소양"}, {"subject": "기하", "group": "C", "reason": "결정 격자 기하학 및 전자기장 분석"}, {"subject": "물질과 에너지·역학과 에너지", "group": "D", "reason": "반도체 밴드갭 및 나노 열전달 메커니즘"}, {"subject": "미적분Ⅱ·전자기와 양자·고급 물리학·고급 화학", "group": "E", "reason": "과기원 무학과 전공 필수 고급 이공계 수학·물리 완벽 대비"}], "바이오메디컬엔지니어": [{"subject": "화학·생명과학·물리학", "group": "A", "reason": "의공학 융합 소양 및 생체 인터페이스 물리"}, {"subject": "세포와 물질대사·물질과 에너지", "group": "D", "reason": "생체 신호 및 인공 장기 세포 적합성"}, {"subject": "미적분Ⅱ·화학 반응의 세계·생물의 유전", "group": "E", "reason": "의료 인공지능 영상 분석 및 첨단 유전자 치료제 공학"}], "로봇/모빌리티 연구원": [{"subject": "물리학·기하·데이터 과학·역학과 에너지·미적분Ⅱ", "group": "E/학교지정", "reason": "자율주행, 로보틱스 동역학 및 제어이론 종합 대비"}]}};
+
+    let historyStack = ['home'];
+    let currentCategory = '';
+    let currentCareer = '';
+
+    const viewTitles = {
+      'home': '진해고 입학안내',
+      'career': '진로별 과목 추천',
+      'school': '학교 소개 (5대 강점)',
+      'records': '2026학년도 진학 실적',
+      'dormitory': '기숙사 안내',
+      'curriculum': '3개년 교육과정',
+      'clubs': '동아리·활동',
+      'schedule': '입학 전형 일정'
+    };
+
+    const categoryIcons = {
+      '의약·보건': '🩺',
+      '공학·IT': '⚙️',
+      '자연과학': '🔬',
+      '인문·사회': '⚖️',
+      '교육': '🎓',
+      '사관학교·군': '⚓',
+      '과학기술원': '🚀'
+    };
+
+    function init() {
+      renderCategories();
+    }
+
+    function navigateTo(viewId) {
+      if (historyStack[historyStack.length - 1] !== viewId) {
+        historyStack.push(viewId);
+      }
+      renderView(viewId);
+    }
+
+    function goBack() {
+      if (historyStack.length > 1) {
+        const currentView = historyStack[historyStack.length - 1];
+        if (currentView === 'career') {
+          const resultStep = document.getElementById('result-step');
+          const careersStep = document.getElementById('careers-step');
+          if (resultStep.style.display !== 'none') {
+            backToCareersStep();
+            return;
+          } else if (careersStep.style.display !== 'none') {
+            backToCategoryStep();
+            return;
+          }
+        }
+
+        historyStack.pop();
+        const prevView = historyStack[historyStack.length - 1];
+        renderView(prevView);
+      }
+    }
+
+    function renderView(viewId) {
+      document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById('view-' + viewId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      const backBtn = document.getElementById('header-back-btn');
+      const titleText = document.getElementById('header-title-text');
+      
+      if (viewId === 'home') {
+        backBtn.style.display = 'none';
+      } else {
+        backBtn.style.display = 'flex';
+      }
+
+      titleText.textContent = viewTitles[viewId] || '진해고 입학안내';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('category-step');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const categories = Object.keys(CAREER_DATA);
+      categories.forEach(cat => {
+        const careers = Object.keys(CAREER_DATA[cat]);
+        const previewText = careers.slice(0, 3).join(', ') + (careers.length > 3 ? ' 등' : '');
+        const icon = categoryIcons[cat] || '🎯';
+
+        const card = document.createElement('div');
+        card.className = 'category-card';
+        card.onclick = () => selectCategory(cat);
+        card.innerHTML = `
+          <div class="category-icon">${icon}</div>
+          <div class="category-info">
+            <div class="category-name">${cat}</div>
+            <div class="category-careers-preview">${previewText}</div>
+          </div>
+          <span style="color:var(--text-muted); font-size:18px;">›</span>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectCategory(cat) {
+      currentCategory = cat;
+      document.getElementById('category-step').style.display = 'none';
+      document.getElementById('careers-step').style.display = 'block';
+      document.getElementById('result-step').style.display = 'none';
+
+      document.getElementById('selected-category-title').textContent = `${categoryIcons[cat] || ''} ${cat} 전공 목록`;
+
+      const btnContainer = document.getElementById('career-btn-container');
+      btnContainer.innerHTML = '';
+
+      const careers = Object.keys(CAREER_DATA[cat] || {});
+      careers.forEach(career => {
+        const btn = document.createElement('button');
+        btn.className = 'career-btn';
+        btn.onclick = () => selectCareer(career);
+        btn.innerHTML = `<span>${career}</span><span style="color:var(--accent-blue);">선택 ➔</span>`;
+        btnContainer.appendChild(btn);
+      });
+    }
+
+    function backToCategoryStep() {
+      document.getElementById('category-step').style.display = 'grid';
+      document.getElementById('careers-step').style.display = 'none';
+      document.getElementById('result-step').style.display = 'none';
+    }
+
+    function selectCareer(career) {
+      currentCareer = career;
+      document.getElementById('category-step').style.display = 'none';
+      document.getElementById('careers-step').style.display = 'none';
+      document.getElementById('result-step').style.display = 'block';
+
+      document.getElementById('result-career-name').textContent = career;
+      document.getElementById('result-career-category').textContent = `${currentCategory} 트랙`;
+
+      const courseList = document.getElementById('result-course-list');
+      courseList.innerHTML = '';
+
+      const courses = CAREER_DATA[currentCategory][career] || [];
+      const groupPriority = { 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7 };
+      const sorted = [...courses].sort((a, b) => {
+        const pa = groupPriority[a.group] || 99;
+        const pb = groupPriority[b.group] || 99;
+        return pa - pb;
+      });
+
+      sorted.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'course-card';
+        card.innerHTML = `
+          <div class="course-card-header">
+            <span class="course-name">${c.subject}</span>
+            <span class="course-group-badge">선택군 ${c.group}</span>
+          </div>
+          <p class="course-reason">${c.reason}</p>
+        `;
+        courseList.appendChild(card);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function backToCareersStep() {
+      document.getElementById('category-step').style.display = 'none';
+      document.getElementById('careers-step').style.display = 'block';
+      document.getElementById('result-step').style.display = 'none';
+    }
+
+    function switchDormTab(tabId) {
+      document.querySelectorAll('.sub-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.sub-tab-pane').forEach(pane => pane.classList.remove('active'));
+
+      event.target.classList.add('active');
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) targetPane.classList.add('active');
+    }
+
+    function shareApp() {
+      const shareData = {
+        title: '진해고등학교 2027 입학안내 & 교육과정 가이드',
+        text: '진해고등학교 2027학년도 신입생 학교소개 모바일 웹앱',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast();
+        }).catch(() => {
+          showToast();
+        });
+      }
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    window.onload = init;
+
+  </script>
+</body>
+</html>
