@@ -2,7 +2,10 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
   <title>진해고등학교 2027학년도 학교소개 & 교육과정 가이드</title>
   <style>
   
@@ -29,11 +32,23 @@
   --radius-full: 9999px;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+}
+
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -42,19 +57,30 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   font-size: 16px;
-  padding-bottom: 80px;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
-/* App Container */
+/* App Container - Responsive Auto-Fit */
 .app-container {
-  max-width: 480px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 540px;
   min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
   background-color: var(--bg-main);
   position: relative;
-  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  box-shadow: 0 0 25px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -62,20 +88,27 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
-  padding: 12px 16px;
+  padding: 10px 16px;
+  padding-top: max(10px, env(safe-area-inset-top));
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  min-height: 58px;
+  box-sizing: border-box;
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
 }
 
 .back-btn {
@@ -91,6 +124,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+  flex-shrink: 0;
 }
 
 .back-btn:hover {
@@ -101,6 +135,8 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  flex: 1;
 }
 
 .school-badge {
@@ -111,18 +147,23 @@ body {
   padding: 2px 7px;
   border-radius: 4px;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
 }
 
 .header-title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--primary-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .btn-header-icon {
@@ -134,12 +175,16 @@ body {
   padding: 6px;
   border-radius: 50%;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Content Area */
 .app-content {
   flex: 1;
   padding: 16px;
+  min-width: 0;
 }
 
 /* View Section */
@@ -316,21 +361,27 @@ body {
   color: var(--text-sub);
 }
 
-/* Bottom Share Bar */
+/* Bottom Share Bar - Responsive Auto-Fit */
 .bottom-share-bar {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 480px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  max-width: 540px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-color);
-  padding: 12px 16px;
+  padding: 10px 16px;
+  padding-bottom: max(10px, calc(8px + env(safe-area-inset-bottom, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
   display: flex;
   gap: 10px;
   z-index: 90;
+  box-sizing: border-box;
 }
 
 .btn-share {
@@ -600,24 +651,46 @@ body {
   display: block;
 }
 
+/* Responsive Table Wrapper */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 12px 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+
+.table-responsive-wrapper .app-table {
+  margin: 0;
+  border: none;
+}
+
 /* Table Style */
 .app-table {
   width: 100%;
+  min-width: 100%;
   border-collapse: collapse;
   margin: 12px 0;
   font-size: 13.5px;
+  table-layout: auto;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .app-table th, .app-table td {
   border: 1px solid var(--border-color);
   padding: 10px 8px;
   text-align: left;
+  line-height: 1.45;
 }
 
 .app-table th {
   background-color: var(--light-blue);
   color: var(--primary-navy);
   font-weight: 700;
+  white-space: nowrap;
 }
 
 /* Timeline */
@@ -693,6 +766,161 @@ body {
   opacity: 1;
 }
 
+/* ======================================================= */
+/* 📱 Responsive Mobile Auto-Fit Breakpoints                */
+/* ======================================================= */
+
+/* Full edge-to-edge feel on mobile */
+@media (max-width: 540px) {
+  .app-container {
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .bottom-share-bar {
+    max-width: 100%;
+  }
+}
+
+/* Small smartphones (width <= 380px: Galaxy S small, iPhone SE, etc.) */
+@media (max-width: 380px) {
+  body {
+    font-size: 15px;
+  }
+  .app-content {
+    padding: 12px;
+  }
+  .home-hero {
+    padding: 16px 14px;
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  .hero-desc {
+    font-size: 12px;
+  }
+  .home-grid {
+    gap: 8px;
+  }
+  .home-card-btn {
+    padding: 12px 10px;
+    min-height: 98px;
+  }
+  .home-card-btn.featured {
+    padding: 14px 12px;
+  }
+  .card-icon-wrap {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .home-card-btn.featured .card-icon-wrap {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .card-label-title {
+    font-size: 14px;
+  }
+  .card-label-desc {
+    font-size: 11px;
+  }
+  .page-title {
+    font-size: 19px;
+  }
+  .page-subtitle {
+    font-size: 13px;
+  }
+  .card {
+    padding: 13px 12px;
+  }
+  .kpi-grid {
+    gap: 8px;
+  }
+  .kpi-card {
+    padding: 10px 8px;
+  }
+  .kpi-num {
+    font-size: 22px;
+  }
+  .kpi-label {
+    font-size: 11px;
+  }
+  .app-table {
+    font-size: 12px;
+  }
+  .app-table th, .app-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .category-card {
+    padding: 12px;
+    gap: 10px;
+  }
+  .category-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+  .category-name {
+    font-size: 15px;
+  }
+  .category-careers-preview {
+    font-size: 11.5px;
+  }
+  .career-btn {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+  .course-card {
+    padding: 12px;
+  }
+  .course-name {
+    font-size: 14.5px;
+  }
+  .course-reason {
+    font-size: 12.5px;
+  }
+  .btn-share {
+    height: 44px;
+    font-size: 13.5px;
+    gap: 6px;
+  }
+  .btn-chatbot-float {
+    height: 44px;
+    padding: 0 12px;
+    font-size: 13px;
+    gap: 4px;
+  }
+}
+
+/* Tablet & Desktop Centered Presentation (width > 540px) */
+@media (min-width: 541px) {
+  body {
+    background-color: #E2E8F0;
+  }
+  .app-container {
+    margin: 20px auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: calc(100vh - 40px);
+    box-shadow: 0 12px 40px rgba(15, 37, 74, 0.12);
+  }
+  .bottom-share-bar {
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+  }
+  .app-header {
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+  }
+}
   </style>
 </head>
 <body>
@@ -894,14 +1122,16 @@ body {
 
 <div class="card" style="background:#FAFBFD; margin-top:20px;">
   <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:10px;">학교 기본 정보</h3>
-  <table class="app-table" style="background:#fff;">
-    <tr><th style="width:30%;">학교 유형</th><td>공립 일반고 (후기 / 남학교)</td></tr>
-    <tr><th>모집 정원</th><td>보통과 10학급 300명 (남학생)</td></tr>
-    <tr><th>학교 주소</th><td>(51695) 경남 창원시 진해구 여좌로 100</td></tr>
-    <tr><th>교무실</th><td><a href="tel:055-546-2260" style="color:var(--accent-blue); font-weight:700; text-decoration:none;">055-546-2260 (입학상담)</a></td></tr>
-    <tr><th>행정실</th><td>055-546-2361</td></tr>
-    <tr><th>공식 누리집</th><td><a href="https://jinhae-h.gne.go.kr" target="_blank" style="color:var(--accent-blue); text-decoration:none;">jinhae-h.gne.go.kr</a></td></tr>
-  </table>
+  <div class="table-responsive-wrapper">
+    <table class="app-table" style="background:#fff;">
+      <tr><th style="width:30%;">학교 유형</th><td>공립 일반고 (후기 / 남학교)</td></tr>
+      <tr><th>모집 정원</th><td>보통과 10학급 300명 (남학생)</td></tr>
+      <tr><th>학교 주소</th><td>(51695) 경남 창원시 진해구 여좌로 100</td></tr>
+      <tr><th>교무실</th><td><a href="tel:055-546-2260" style="color:var(--accent-blue); font-weight:700; text-decoration:none;">055-546-2260 (입학상담)</a></td></tr>
+      <tr><th>행정실</th><td>055-546-2361</td></tr>
+      <tr><th>공식 누리집</th><td><a href="https://jinhae-h.gne.go.kr" target="_blank" style="color:var(--accent-blue); text-decoration:none;">jinhae-h.gne.go.kr</a></td></tr>
+    </table>
+  </div>
 </div>
 
       </div>
@@ -1019,12 +1249,14 @@ body {
 <div id="tab-dorm-overview" class="sub-tab-pane active">
   <div class="card">
     <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">동백관 & 송학관 시설 현황</h3>
-    <table class="app-table">
-      <tr><th>구분</th><th>동백관 (1·2·3학년)</th><th>송학관 (3학년)</th></tr>
-      <tr><td>수용 규모</td><td><strong>117명</strong> (2027 신입 51명)</td><td><strong>36명</strong></td></tr>
-      <tr><td>호실 구조</td><td>1실 3인실</td><td>1실 2인실</td></tr>
-      <tr><td>운영 목표</td><td>고교 적응 + 5시간 자습 루틴</td><td>수험생 맞춤 몰입 환경</td></tr>
-    </table>
+    <div class="table-responsive-wrapper">
+      <table class="app-table">
+        <tr><th>구분</th><th>동백관 (1·2·3학년)</th><th>송학관 (3학년)</th></tr>
+        <tr><td>수용 규모</td><td><strong>117명</strong> (2027 신입 51명)</td><td><strong>36명</strong></td></tr>
+        <tr><td>호실 구조</td><td>1실 3인실</td><td>1실 2인실</td></tr>
+        <tr><td>운영 목표</td><td>고교 적응 + 5시간 자습 루틴</td><td>수험생 맞춤 몰입 환경</td></tr>
+      </table>
+    </div>
     
     <div style="background:var(--bg-sub); padding:12px; border-radius:8px; margin-top:12px;">
       <div style="font-size:13.5px; font-weight:700; color:var(--primary-navy); margin-bottom:4px;">🏛️ 학습 환경 (공통 집중 학습 시설)</div>
@@ -1171,16 +1403,18 @@ body {
 
 <div class="card">
   <h3 style="font-size:16px; font-weight:700; color:var(--primary-navy); margin-bottom:8px;">선택 과목군 (A~G) 요약표</h3>
-  <table class="app-table">
-    <tr><th>선택군</th><th>이수시기</th><th>학점</th><th>개설 과목수</th></tr>
-    <tr><td><strong>선택군A</strong></td><td>2학년 1학기</td><td>9</td><td>8과목 중 택3</td></tr>
-    <tr><td><strong>선택군B</strong></td><td>2학년 1학기</td><td>3</td><td>4과목 중 택1 (데이터과학 신설)</td></tr>
-    <tr><td><strong>선택군C</strong></td><td>2학년 2학기</td><td>3</td><td>5과목 중 택1</td></tr>
-    <tr><td><strong>선택군D</strong></td><td>2학년 2학기</td><td>9</td><td>8과목 중 택3</td></tr>
-    <tr><td><strong>선택군E</strong></td><td>3학년 1학기</td><td>12</td><td><strong>19과목 통합</strong> (자율 택4)</td></tr>
-    <tr><td><strong>선택군F</strong></td><td>3학년 2학기</td><td>12</td><td>5과목 중 택3</td></tr>
-    <tr><td><strong>선택군G</strong></td><td>3학년 연계</td><td>4</td><td>3과목 중 택1</td></tr>
-  </table>
+  <div class="table-responsive-wrapper">
+    <table class="app-table">
+      <tr><th>선택군</th><th>이수시기</th><th>학점</th><th>개설 과목수</th></tr>
+      <tr><td><strong>선택군A</strong></td><td>2학년 1학기</td><td>9</td><td>8과목 중 택3</td></tr>
+      <tr><td><strong>선택군B</strong></td><td>2학년 1학기</td><td>3</td><td>4과목 중 택1 (데이터과학 신설)</td></tr>
+      <tr><td><strong>선택군C</strong></td><td>2학년 2학기</td><td>3</td><td>5과목 중 택1</td></tr>
+      <tr><td><strong>선택군D</strong></td><td>2학년 2학기</td><td>9</td><td>8과목 중 택3</td></tr>
+      <tr><td><strong>선택군E</strong></td><td>3학년 1학기</td><td>12</td><td><strong>19과목 통합</strong> (자율 택4)</td></tr>
+      <tr><td><strong>선택군F</strong></td><td>3학년 2학기</td><td>12</td><td>5과목 중 택3</td></tr>
+      <tr><td><strong>선택군G</strong></td><td>3학년 연계</td><td>4</td><td>3과목 중 택1</td></tr>
+    </table>
+  </div>
   <div style="font-size:12.5px; color:var(--text-muted); margin-top:8px;">
     ※ 3학년 1학기 선택군E는 기초(국수영)와 탐구(사회과학) 19과목을 통합 개설하여 진로 맞춤 선택권을 최대화하였습니다.
   </div>
@@ -1543,11 +1777,12 @@ body {
       document.getElementById('result-step').style.display = 'none';
     }
 
-    function switchDormTab(tabId) {
+    function switchDormTab(tabId, ev) {
       document.querySelectorAll('.sub-tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.sub-tab-pane').forEach(pane => pane.classList.remove('active'));
 
-      event.target.classList.add('active');
+      const triggerBtn = (ev && ev.currentTarget) || (ev && ev.target) || (window.event && (window.event.currentTarget || window.event.target));
+      if (triggerBtn) triggerBtn.classList.add('active');
       const targetPane = document.getElementById(tabId);
       if (targetPane) targetPane.classList.add('active');
     }
