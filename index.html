@@ -1282,7 +1282,7 @@
       <p class="font-bold text-slate-700 text-sm sm:text-base">진해고등학교</p>
       <p>경상남도 창원시 진해구 여좌로 100</p>
       <p>교무실(입학 상담) <a href="tel:0555462260" class="underline underline-offset-2">055-546-2260</a> · 행정실 <a href="tel:0555462361" class="underline underline-offset-2">055-546-2361</a></p>
-      <p><a href="http://jinhae-h.gne.go.kr" target="_blank" rel="noopener" class="underline underline-offset-2">학교 누리집 바로가기</a></p>
+      <p><a href="https://jinhae-h.gne.go.kr" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">학교 누리집 바로가기</a></p>
       <p class="mt-2 text-slate-400">본 페이지는 2027학년도 신입생 입학전형 안내 기준이며, 세부 사항은 학교 누리집 공지가 우선합니다.</p>
     </section>
   </main>
@@ -1321,7 +1321,7 @@
           </div>
         </div>
         <div class="flex items-center gap-1 flex-shrink-0">
-          <a href="https://jinhae-bot2.vercel.app/" target="_blank" rel="noopener" class="p-2 text-slate-300 hover:text-white rounded-full hover:bg-white/10" aria-label="챗봇 새 창으로 열기">
+          <a href="https://jinhae-bot2.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-300 hover:text-white rounded-full hover:bg-white/10" aria-label="챗봇 새 창으로 열기">
             <i data-lucide="external-link" class="w-[18px] h-[18px]"></i>
           </a>
           <button type="button" id="chat-close" class="p-2 text-slate-300 hover:text-white rounded-full hover:bg-white/10" aria-label="상담 창 닫기">
@@ -1330,7 +1330,12 @@
         </div>
       </div>
 
-      <div id="chat-suggest" class="hidden flex-shrink-0 bg-blue-50 border-b border-blue-100 px-4 py-2.5 flex items-center gap-2">
+              <!-- 개인정보 보호 안내 바 -->
+        <p class="flex-shrink-0 bg-amber-50 border-b border-amber-200 px-4 py-1.5 text-[11px] sm:text-xs text-amber-900 flex items-center gap-1.5">
+          <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 flex-shrink-0"></i>
+          <span>학생 실명·연락처·주민번호 등 개인정보는 입력하지 마세요. (상담 내역은 진학 참고용입니다)</span>
+        </p>
+        <div id="chat-suggest" class="hidden flex-shrink-0 bg-blue-50 border-b border-blue-100 px-4 py-2.5 flex items-center gap-2">
         <span class="text-xs sm:text-sm font-bold text-blue-700 flex-shrink-0">추천 질문</span>
         <span id="chat-suggest-text" class="text-xs sm:text-sm text-slate-700 truncate flex-1"></span>
         <button type="button" id="chat-suggest-copy" class="flex-shrink-0 inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-white bg-brand-blue px-2.5 py-1 rounded-full">
@@ -1342,9 +1347,9 @@
         <div id="chat-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 text-slate-500 text-sm sm:text-base">
           <i data-lucide="loader-circle" class="w-7 h-7 animate-spin text-brand-blue"></i>
           <span>AI 상담 선생님을 연결하고 있어요…</span>
-          <a id="chat-fallback" href="https://jinhae-bot2.vercel.app/" target="_blank" rel="noopener" class="hidden text-brand-blue font-bold underline underline-offset-2">연결이 느리면 새 창에서 열기</a>
+          <a id="chat-fallback" href="https://jinhae-bot2.vercel.app/" target="_blank" rel="noopener noreferrer" class="hidden text-brand-blue font-bold underline underline-offset-2">연결이 느리면 새 창에서 열기</a>
         </div>
-        <iframe id="chatbot-iframe" data-src="https://jinhae-bot2.vercel.app/" title="진해고 AI 입학상담 챗봇" class="absolute inset-0 w-full h-full border-0 opacity-0 transition-opacity duration-300" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe id="chatbot-iframe" data-src="https://jinhae-bot2.vercel.app/" title="진해고 AI 입학상담 챗봇" class="absolute inset-0 w-full h-full border-0 opacity-0 transition-opacity duration-300" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
       </div>
     </div>
   </div>
@@ -1652,6 +1657,7 @@
       $('percentile-input').blur(); // 모바일 키보드 닫기
 
       var region = $('school-region').value;
+      if (!Object.prototype.hasOwnProperty.call(REGION, region)) region = 'in';
       var res = diagnose(region, parsed.value, $('multichild-check').checked);
       var tone = TONE[res.tone];
       var box = $('dorm-result-box');
@@ -2647,14 +2653,19 @@
       var buttons = document.querySelectorAll('.font-size-ctrl-btn');
       if (!buttons.length) return;
 
-      var savedSize = localStorage.getItem('jinhae_font_size') || 'large';
+      var ALLOWED_SIZES = ['normal', 'large', 'xlarge'];
+      var savedSize = 'large';
+      try {
+        var stored = window.localStorage.getItem('jinhae_font_size');
+        if (ALLOWED_SIZES.indexOf(stored) !== -1) savedSize = stored;
+      } catch (e) { /* 스토리지 접근 제한 환경 예외 방어 */ }
       applySize(savedSize);
 
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           var size = btn.getAttribute('data-fsize');
           applySize(size);
-          localStorage.setItem('jinhae_font_size', size);
+          try { window.localStorage.setItem('jinhae_font_size', size); } catch (e) { /* noop */ }
         });
       });
 
@@ -3208,7 +3219,7 @@
               <i data-lucide="info" class="w-4 h-4 text-brand-blue flex-shrink-0"></i>
               <span>공식 16쪽 PDF 문서 원본이 내장되어 있습니다. 확대/축소 및 페이지 탐색이 자유롭습니다.</span>
             </span>
-            <a href="assets/docs/2027_jinhae_admission_brochure.pdf" target="_blank" class="text-brand-blue underline font-bold hover:text-blue-800 ml-2 flex-shrink-0">새 탭 전체화면 열기</a>
+            <a href="assets/docs/2027_jinhae_admission_brochure.pdf" target="_blank" rel="noopener noreferrer" class="text-brand-blue underline font-bold hover:text-blue-800 ml-2 flex-shrink-0">새 탭 전체화면 열기</a>
           </div>
           <iframe id="brochure-pdf-frame" src="about:blank" data-src="assets/docs/2027_jinhae_admission_brochure.pdf#page=1&view=FitH" class="w-full flex-grow rounded-2xl border border-slate-300 bg-white min-h-[62vh]" title="2027학년도 진해고등학교 신입생 입학안내 팸플릿 PDF 원본"></iframe>
         </div>
