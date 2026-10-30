@@ -1153,57 +1153,74 @@
     </section>
 
 
-    <!-- WIDGET 4-B. [NEW] 학부모 대상 입학홍보 카드뉴스 5편 기획물 쇼케이스 -->
+    <!-- WIDGET 4-B. [NEW] 학부모 대상 입학홍보 카드뉴스 7장 기획물 쇼케이스 -->
     <section id="cardnews" class="card p-5 sm:p-7 reveal-on-scroll tilt-card" aria-labelledby="cardnews-title">
       <div class="flex items-start justify-between gap-3">
         <div>
-          <p class="text-xs font-bold text-rose-600">학부모를 위한 핵심 요약 기획물</p>
+          <p class="text-xs font-bold text-rose-600">학부모를 위한 핵심 요약 기획물 (총 7장)</p>
           <h2 id="cardnews-title" class="text-[19px] sm:text-2xl font-extrabold text-slate-900 mt-1 leading-snug">
-            입학홍보 카드뉴스 5부작 시리즈
+            입학홍보 카드뉴스 한눈에 보기
           </h2>
         </div>
         <span class="flex-shrink-0 bg-rose-100 text-rose-800 text-xs sm:text-sm font-bold px-2.5 py-1 rounded-full">학부모 필독</span>
       </div>
 
       <p class="text-sm sm:text-base text-slate-600 mt-2 mb-4 leading-relaxed">
-        입학설명회 핵심 내용과 진해고의 독보적 강점 5가지를 카드뉴스로 정리했습니다. 원하시는 편을 선택하여 카드 이미지를 넘겨보시거나, 원본을 크게 확대하여 보실 수 있습니다.
+        2028 대입 개편 5등급제 분석과 진해고만의 강점을 7장의 카드뉴스로 정리했습니다. <strong>이미지를 좌우로 밀거나(스와이프) 화살표를 눌러</strong> 한 장씩 넘겨보실 수 있습니다.
       </p>
 
-      <!-- 5편 에피소드 탭 셀렉터 -->
-      <div class="tab-scroll flex gap-1.5 overflow-x-auto -mx-1 px-1 pb-2" role="tablist" aria-label="카드뉴스 5편 목록">
+      <!-- 7장 에피소드 탭 셀렉터 -->
+      <div class="tab-scroll flex gap-1.5 overflow-x-auto -mx-1 px-1 pb-2" role="tablist" aria-label="카드뉴스 7장 목록">
         <button type="button" class="cardnews-tab-btn active whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-brand-navy text-white transition shadow-sm" data-card-idx="0">
-          제1편. 2028 5등급제 모수
+          01. 2028 개편 팩트체크
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-card-idx="1">
-          제2편. 153명 기숙사 케어
+          02. 1등급 2.5배 확대
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-card-idx="2">
-          제3편. 연 9,000만 장학금
+          03. 300명 모수 파워
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-card-idx="3">
-          제4편. 대입 성과 투트랙
+          04. 대입 변별력 핵심
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-card-idx="4">
-          제5편. 2027 전형일정
+          05. 소인수 과목 100%
+        </button>
+        <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-card-idx="5">
+          06. 기숙사 5시간 자습
+        </button>
+        <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-card-idx="6">
+          07. 3중 안전망 & QR
         </button>
       </div>
 
       <!-- 인터랙티브 카드뉴스 뷰어 박스 -->
       <div class="mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-4 sm:p-5">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
-          <!-- 카드뉴스 이미지 미리보기 & 돋보기 클릭 영역 -->
+          <!-- 카드뉴스 이미지 미리보기 & 스와이프/클릭 영역 -->
           <div class="md:col-span-5 flex flex-col items-center">
-            <div class="relative w-full max-w-[280px] aspect-[4/5] bg-white rounded-xl overflow-hidden shadow-md border border-slate-200 group cursor-pointer" onclick="openCardnewsModalCurrent()">
-              <img id="cardnews-viewer-img" src="assets/images/cardnews/card_01_cover.png" alt="진해고 입학홍보 카드뉴스 제1편" class="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300" loading="lazy">
-              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span class="inline-flex items-center gap-1.5 bg-white/95 text-slate-900 font-extrabold text-xs px-3.5 py-2 rounded-full shadow-lg">
-                  <i data-lucide="zoom-in" class="w-4 h-4 text-brand-blue"></i>
-                  원본 크게 보기
-                </span>
-              </div>
+            <div id="cardnews-inline-stage" class="relative w-full max-w-[300px] aspect-[4/5] bg-white rounded-xl overflow-hidden shadow-md border border-slate-200 group select-none" style="touch-action: pan-y;">
+              <img id="cardnews-viewer-img" src="assets/images/cardnews/card_01_cover.png" alt="진해고 입학홍보 카드뉴스 제1장" class="w-full h-full object-cover transition-all duration-200 cursor-pointer" onclick="openCardnewsModalCurrent()" draggable="false">
+              
+              <!-- 인라인 좌우 넘김 플로팅 버튼 (모바일 & PC 상시 노출) -->
+              <button type="button" onclick="event.stopPropagation(); stepCardnews(-1);" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-slate-900/65 hover:bg-slate-900/85 active:scale-95 text-white flex items-center justify-center shadow-md backdrop-blur-xs transition" aria-label="이전 카드뉴스">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+              </button>
+              <button type="button" onclick="event.stopPropagation(); stepCardnews(1);" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-slate-900/65 hover:bg-slate-900/85 active:scale-95 text-white flex items-center justify-center shadow-md backdrop-blur-xs transition" aria-label="다음 카드뉴스">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </button>
+
+              <!-- 우측 상단 페이지 배지 -->
+              <span id="cardnews-img-counter" class="absolute top-2.5 right-2.5 z-10 bg-slate-900/75 text-white text-[11px] font-extrabold px-2 py-0.5 rounded-full backdrop-blur-xs tabular">1 / 7</span>
+
+              <!-- 하단 크게 보기 안내 캡슐 -->
+              <button type="button" onclick="openCardnewsModalCurrent()" class="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-10 inline-flex items-center gap-1 bg-slate-900/80 hover:bg-slate-900 text-white font-bold text-[11px] px-3 py-1.5 rounded-full shadow-md backdrop-blur-xs transition whitespace-nowrap">
+                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-300"></i>
+                <span>크게 보기 · 좌우 스와이프</span>
+              </button>
             </div>
-            <span class="text-xs sm:text-sm text-slate-400 mt-2 flex items-center gap-1">
-              <i data-lucide="touchpad" class="w-3 h-3"></i> 이미지를 클릭하면 고화질 전체화면으로 열립니다
+            <span class="text-xs text-slate-500 mt-2 flex items-center gap-1 font-medium">
+              👆 이미지를 좌우로 밀거나 터치하면 크게 볼 수 있습니다
             </span>
           </div>
 
@@ -1211,14 +1228,14 @@
           <div class="md:col-span-7 flex flex-col justify-between h-full space-y-4">
             <div>
               <div class="flex items-center gap-2 mb-2">
-                <span id="cardnews-badge" class="bg-rose-100 text-rose-800 text-xs sm:text-sm font-extrabold px-2 py-0.5 rounded-md">제1편 핵심 분석</span>
-                <span id="cardnews-indicator" class="text-xs text-slate-400 font-bold tabular">1 / 5</span>
+                <span id="cardnews-badge" class="bg-rose-100 text-rose-800 text-xs sm:text-sm font-extrabold px-2 py-0.5 rounded-md">01장 · 2028 개편 팩트체크</span>
+                <span id="cardnews-indicator" class="text-xs text-slate-400 font-bold tabular">1 / 7</span>
               </div>
               <h3 id="cardnews-title-text" class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug">
-                2028 대입 개편 5등급제와 300명 대단지 일반고의 압도적 시너지
+                2028 대입 개편 5등급제, 진짜 수혜를 받는 학교는 따로 있습니다!
               </h3>
               <p id="cardnews-desc-text" class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                2028학년도 5등급제 개편 시 1등급 비율이 상위 10%로 확대됩니다. 학생 수가 적은 소규모 학교는 1등급이 10명에 불과해 1명만 밀려도 1.00%p가 흔들리지만, 진해고는 10학급 300명 정원으로 1등급이 무려 30명까지 확보되어 내신 안정성이 3배 이상 뛰어납니다.
+                "중학교 땐 상위권이었는데 고등학교 가면 내신 다 무너진다면서요?" 9등급제에서 5등급제로의 대변혁 속에서 진해고가 가진 ‘300명 대단지 모수’와 ‘기숙형 자율학교’의 폭발적 시너지를 객관적 수치로 증명합니다.
               </p>
             </div>
 
@@ -1226,29 +1243,29 @@
             <div id="cardnews-points" class="space-y-1.5 bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs text-slate-700">
               <p class="flex items-start gap-1.5">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
-                <span><strong>1등급 30명 확보:</strong> 300명 모수로 1명의 변동 폭이 단 0.33%p에 불과</span>
+                <span><strong>300명 대단지 모수:</strong> 1등급 30명·2등급 102명 확보로 내신 추락 불안 해소</span>
               </p>
               <p class="flex items-start gap-1.5">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
-                <span><strong>다양한 선택과목 개설:</strong> 학생 수가 많아 소인수 과목도 폐강 없이 안전 개설</span>
+                <span><strong>기숙형 자율학교:</strong> 소인수 심화 선택과목 폐강 없이 100% 개설</span>
               </p>
               <p class="flex items-start gap-1.5">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
-                <span><strong>수능 최저 충족 최적:</strong> 면학 분위기가 잡힌 정독실과 연계하여 수능 최저 충족률 극대화</span>
+                <span><strong>수능 최저 완벽 대비:</strong> 동백관·송학관 기숙사 연계 하루 5시간 10분 자습</span>
               </p>
             </div>
 
             <!-- 이전 / 다음 및 모달 열기 버튼 -->
-            <div class="flex items-center justify-between pt-1">
+            <div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
               <div class="flex gap-2">
-                <button type="button" id="cardnews-prev-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 transition flex items-center gap-1" onclick="stepCardnews(-1)">
-                  <i data-lucide="chevron-left" class="w-4 h-4"></i> 이전 편
+                <button type="button" id="cardnews-prev-btn" class="px-3 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-xs font-bold text-slate-700 transition flex items-center gap-1" onclick="stepCardnews(-1)">
+                  <i data-lucide="chevron-left" class="w-4 h-4"></i> 이전 장
                 </button>
-                <button type="button" id="cardnews-next-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 transition flex items-center gap-1" onclick="stepCardnews(1)">
-                  다음 편 <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                <button type="button" id="cardnews-next-btn" class="px-3 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-xs font-bold text-slate-700 transition flex items-center gap-1" onclick="stepCardnews(1)">
+                  다음 장 <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </button>
               </div>
-              <button type="button" class="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-xs px-3.5 py-2 rounded-xl shadow transition" onclick="openCardnewsModalCurrent()">
+              <button type="button" class="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 active:scale-95 text-white font-extrabold text-xs px-3.5 py-2 rounded-xl shadow transition" onclick="openCardnewsModalCurrent()">
                 <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> 카드뉴스 크게 보기
               </button>
             </div>
@@ -2642,75 +2659,129 @@
       }
     };
 
-    // 4. 학부모 카드뉴스 5부작 시리즈 인터랙티브 엔진
+    // 4. 학부모 카드뉴스 7장 시리즈 인터랙티브 엔진 (모바일 터치 스와이프 완벽 지원)
     var cardnewsEpisodes = [
       {
-        badge: '제1편 핵심 분석',
-        title: '2028 대입 개편 5등급제와 300명 대단지 일반고의 압도적 시너지',
-        desc: '2028학년도 5등급제 개편 시 1등급 비율이 상위 10%로 확대됩니다. 학생 수가 적은 소규모 학교는 1등급이 10명에 불과해 1명만 밀려도 1.00%p가 흔들리지만, 진해고는 10학급 300명 정원으로 1등급이 무려 30명까지 확보되어 내신 안정성이 3배 이상 뛰어납니다.',
+        badge: '01장 · 2028 개편 팩트체크',
+        title: '2028 대입 개편 5등급제, 진짜 수혜를 받는 학교는 따로 있습니다!',
+        desc: '"중학교 땐 상위권이었는데 고등학교 가면 내신 다 무너진다면서요?" 9등급제에서 5등급제로의 대변혁 속에서 진해고가 가진 ‘300명 대단지 모수’와 ‘기숙형 자율학교’의 폭발적 시너지를 객관적 수치로 증명합니다.',
         img: 'assets/images/cardnews/card_01_cover.png',
         points: [
-          '<strong>1등급 30명 확보:</strong> 300명 모수로 1명의 변동 폭이 단 0.33%p에 불과',
-          '<strong>다양한 선택과목 개설:</strong> 학생 수가 많아 소인수 심화 과목도 폐강 없이 안전 개설',
-          '<strong>수능 최저 충족 최적:</strong> 면학 분위기가 잡힌 정독실과 연계하여 수능 최저 충족률 극대화'
+          '<strong>300명 대단지 모수:</strong> 1등급 30명·2등급 102명 확보로 내신 추락 불안 해소',
+          '<strong>기숙형 자율학교:</strong> 소인수 심화 선택과목 폐강 없이 100% 개설',
+          '<strong>수능 최저 완벽 대비:</strong> 동백관·송학관 기숙사 연계 하루 5시간 10분 자습'
         ]
       },
       {
-        badge: '제2편 시설 케어',
-        title: '153명 수용 기숙사 동백관 · 송학관 & 통학 피로 없는 올인원 라이프',
-        desc: '원거리 학생(김해, 양산, 거제, 부산 등 관외 30% 우선선발)과 관내 우수 학생(5% 우선선발)을 위한 153명 규모의 첨단 기숙사입니다. 쾌적한 3인실(동백관 117명)과 2인실(송학관 36명), 직영 3식 식단과 1인 1지정석 정독실로 3년간 통학 스트레스 제로 환경을 보장합니다.',
+        badge: '02장 · 1등급 2.5배 확대',
+        title: '1등급의 문이 ‘2.5배’ 넓어집니다 (상위 4% → 상위 10%)',
+        desc: '상위 4%만 살아남던 피 말리는 시대는 끝났습니다. 새로운 5등급제에서는 1등급이 상위 10%로 2.5배 확대되고, 2등급도 상위 34%(과거 4등급 중반)까지 대폭 넓어져 성실히 노력하는 학생에게 대역전의 문이 열립니다.',
+        img: 'assets/images/cardnews/card_02_grade5.png',
+        points: [
+          '<strong>1등급 상위 10% 확대:</strong> 기존 9등급제(4%) 대비 1등급 인원 2.5배 증가',
+          '<strong>2등급 상위 34% 편입:</strong> 과거 4등급 중반 성적대까지 모두 2등급권 진입',
+          '<strong>실수 만회 기회 보장:</strong> 한 문제 실수로 등급이 급락하던 출혈 경쟁 완화'
+        ]
+      },
+      {
+        badge: '03장 · 300명 내신 모수 파워',
+        title: '전교생 수가 적은 학교가 위험한 진짜 이유 (1등급 30명 vs 10명)',
+        desc: '5등급제에서는 ‘전교생 수(모수)’가 결과를 결정합니다. 100명 소규모 고교는 1등급이 단 10명뿐이라 수행평가 1점 차이로 2등급으로 추락하지만, 300명 대단지 진해고는 1등급 30명·2등급 102명까지 든든한 내신 안전망이 확보됩니다.',
         img: 'assets/images/cardnews/card_03_dorm_care.png',
         points: [
-          '<strong>153명 대규모 수용:</strong> 동백관 3인실(117명) · 송학관 2인실(36명) 전 호실 에어컨 완비',
-          '<strong>전용 독서실 1인 1지정석:</strong> 개인별 사물함 및 와이파이 인강 환경 제공',
-          '<strong>안심 직영 3식 제공:</strong> 영양사 직영 아침·점심·저녁 균형 잡힌 프리미엄 식단'
+          '<strong>1등급 30명 확보:</strong> 100명 소규모 고교(10명) 대비 3배 많은 1등급 티켓',
+          '<strong>2등급 102명 안전망:</strong> 한 번 실수해도 102등 안에만 들면 탄탄한 2등급 확보',
+          '<strong>1명당 변동폭 최소화:</strong> 300명 모수로 등수 1명당 백분율 변동이 0.33%p에 불과'
         ]
       },
       {
-        badge: '제3편 장학 · 혜택',
-        title: '연간 9,000만 원 장학금 혜택 & 창원시 지원 진해인재스쿨 심화 학습',
-        desc: '총동창회 장학금, 애향삼품 장학금, 창원한마음병원 장학금 등 연간 9,000만 원 규모의 든든한 장학 혜택이 학생들의 학업을 뒷받침합니다. 또한 창원시 지원으로 운영되는 진해인재스쿨을 통해 수도권 수준의 수준별 심화 수업과 1:1 맞춤형 컨설팅을 제공합니다.',
-        img: 'assets/images/cardnews/card_05_scholarship.png',
-        points: [
-          '<strong>연 9,000만 원 장학 혜택:</strong> 중학교 내신 우수 입학생 및 학업 성취 우수자 대상 집중 지급',
-          '<strong>진해인재스쿨 심화반:</strong> 방과 후 및 주말을 활용한 국·영·수 심화 클리닉 운영',
-          '<strong>1:1 대입 컨설팅:</strong> 전문 입시 컨설턴트 및 3학년 진학 지도 교사의 상시 학생부 디자인'
-        ]
-      },
-      {
-        badge: '제4편 입시 결실',
-        title: '2026학년도 대입 실적: 서울대 1명 · 의약학 4명 · 사관학교 7명',
-        desc: '수시(학생부종합·교과)와 정시(수능) 투트랙 지도로 2026학년도 서울대 1명, 의예과 3명, 치·한·약 1명, 사관학교 7명(해사 6, 육사 1), 연고대 4명, 수도권 주요대 32명, 거점국립대 86명 이상의 압도적인 합격 실적을 거두었습니다.',
+        badge: '04장 · 대입 변별력의 핵심',
+        title: '1등급이 흔해지면, 대학은 ‘심화 선택과목’과 ‘수능 최저’를 봅니다',
+        desc: '상위 10%가 모두 1등급을 받는 시대, 대학은 어떻게 변별할까요? 쉬운 과목만 골라 편하게 1등급을 받은 학생은 감점되며, 자신의 진로에 맞는 ‘전공 심화 선택과목 이수 여부’와 ‘수능 최저학력기준 충족 역량’이 합격을 결정짓습니다.',
         img: 'assets/images/cardnews/card_04_admissions.png',
         points: [
-          '<strong>의약학 계열 4명 합격:</strong> 의예과 3명 및 치·한·약 1명(본교 공식 집계 기준)',
-          '<strong>해군사관학교 6명 배출:</strong> 해군 도시 진해의 이점을 살린 사관학교 특별 집중 대비반',
-          '<strong>수시 · 정시 균형 진학:</strong> 탄탄한 내신 모수를 기반으로 학생부종합과 수능 최저 동시 석권'
+          '<strong>변별 기준 1 (전공 심화과목):</strong> 진로에 맞는 심화 과목을 도전적으로 이수했는가 평가',
+          '<strong>변별 기준 2 (수능 최저 충족):</strong> 수시 합격생 40% 이상이 수능 최저 미달로 탈락',
+          '<strong>핵심 결론:</strong> 과목 선택 자율권과 수능 방어력을 동시에 갖춘 고교만이 승리'
         ]
       },
       {
-        badge: '제5편 전형 가이드',
-        title: '2027학년도 신입생 원서접수: 12.10.(목) 시작 · 전형료 0원',
-        desc: '2027학년도 진해고등학교 신입생 원서접수는 2026년 12월 10일(목) 10:00부터 12월 14일(월) 14:00까지 진행됩니다. 전형료는 전액 무료(0원)이며, 예비소집이나 배치고사 없이 중학교 3년간의 내신 성적(석차백분율) 100%로 공정하게 선발합니다.',
+        badge: '05장 · 기숙형 자율학교 강점',
+        title: '"그 과목 우리 학교엔 없어요" 진해고에선 듣지 않을 말입니다',
+        desc: '교육과정 자율권을 가진 기숙형 자율학교 진해고는 단 몇 명의 학생만 희망해도 소인수 과목을 폐강 없이 100% 개설합니다. AI·SW융합, 의약보건, 첨단공학 등 6대 진로 트랙으로 명문대 입학사정관이 열광하는 나만의 세특을 완성합니다.',
+        img: 'assets/images/cardnews/card_05_scholarship.png',
+        points: [
+          '<strong>소인수 과목 100% 개설:</strong> 소수 학생 희망 과목도 폐강 없이 끝까지 개설·지원',
+          '<strong>맞춤형 6대 진로 트랙:</strong> AI·SW, 의약보건, 첨단공학, 인문사회 등 체계적 커리큘럼',
+          '<strong>최고 등급 전공적합성:</strong> 일반고에서 개설조차 어려운 고급·심화 과목 수강 가능'
+        ]
+      },
+      {
+        badge: '06장 · 기숙사 & 심야 면학 인프라',
+        title: '"내신으로 수시를 쓰고, 수능으로 최종 합격을 지킵니다"',
+        desc: '동백관(3인실 117명)·송학관(2인실 36명) 총 153명 수용 기숙사와 직영 3식, 아침 40분 + 심야 4시간 30분(매일 5시간 10분) 자습 및 밤 11:30까지 이어지는 선생님의 밀착 멘토링으로 지방 일반고의 최대 약점인 수능 최저 미달을 완벽 차단합니다.',
+        img: 'assets/images/cardnews/card_06_selfstudy.png',
+        points: [
+          '<strong>153명 수용 최신식 기숙사:</strong> 동백관(117명) + 송학관(36명) 및 영양 가득 직영 3식',
+          '<strong>매일 5시간 10분 순공 확보:</strong> 스마트폰 유혹 없이 공부에만 몰입하는 지정 정독실',
+          '<strong>밤 11:30 밀착 멘토링:</strong> 자율학습 감독 교사의 1:1 질의응답과 철저한 면학 관리'
+        ]
+      },
+      {
+        badge: '07장 · 3중 안전망 & 입학 안내',
+        title: '2028 대입 개편, 진해고에서는 가장 큰 기회가 됩니다!',
+        desc: '① 300명 대단지 모수(1등급 30명, 2등급 102명) ② 기숙형 자율학교 소인수 과목 100% 개설 ③ 동백관·송학관 5시간 10분 자습으로 내신·세특·수능 최저 3중 안전망을 갖췄습니다. 24시간 AI 입학상담으로 지금 바로 궁금증을 해결하세요.',
         img: 'assets/images/cardnews/card_07_qr.png',
         points: [
-          '<strong>접수 일정:</strong> 2026. 12. 10.(목) 10:00 ~ 12. 14.(월) 14:00 (온라인 시스템)',
-          '<strong>무시험 100% 선발:</strong> 전형료 0원, 배치고사 없음, 중학교 교과내신으로 선발',
-          '<strong>합격자 발표:</strong> 2026. 12. 30.(수) 10:00 / 등록확인서 제출 ~ 2027. 1. 4.(월)'
+          '<strong>원서접수 일정:</strong> 2026. 12. 10.(목) 10:00 ~ 12. 14.(월) 14:00 (전형료 0원)',
+          '<strong>선발 방식:</strong> 배치고사·예비소집 없이 중학교 내신(석차백분율) 100% 선발',
+          '<strong>합격자 발표:</strong> 2026. 12. 30.(수) 10:00 / 등록확인서 ~ 2027. 1. 4.(월) 16:30'
         ]
       }
     ];
 
     var currentCardIdx = 0;
+    var totalCardnews = cardnewsEpisodes.length;
+
+    function updateCardModalUI() {
+      var d = cardnewsEpisodes[currentCardIdx];
+      var modalTitle = document.getElementById('card-modal-title');
+      var modalBadge = document.getElementById('card-modal-badge');
+      var modalImg = document.getElementById('card-modal-img');
+      var modalCounter = document.getElementById('card-modal-counter');
+      var dotsContainer = document.getElementById('card-modal-dots');
+
+      if (modalTitle) modalTitle.textContent = d.title;
+      if (modalBadge) modalBadge.textContent = d.badge;
+      if (modalCounter) modalCounter.textContent = (currentCardIdx + 1) + ' / ' + totalCardnews;
+      if (modalImg) {
+        modalImg.style.opacity = '0.35';
+        modalImg.src = d.img;
+        modalImg.alt = d.title;
+        requestAnimationFrame(function () {
+          modalImg.style.opacity = '1';
+        });
+      }
+      if (dotsContainer) {
+        var dotsHtml = '';
+        for (var i = 0; i < totalCardnews; i++) {
+          var active = (i === currentCardIdx);
+          dotsHtml += '<button type="button" onclick="goToCardnewsModal(' + i + ')" class="h-2 rounded-full transition-all ' +
+            (active ? 'w-6 bg-rose-500' : 'w-2 bg-slate-300 hover:bg-slate-400') +
+            '" aria-label="' + (i + 1) + '번째 카드로 이동"></button>';
+        }
+        dotsContainer.innerHTML = dotsHtml;
+      }
+    }
 
     function renderCardnewsEpisode(idx) {
-      currentCardIdx = idx;
-      var d = cardnewsEpisodes[idx];
+      currentCardIdx = (idx + totalCardnews) % totalCardnews;
+      var d = cardnewsEpisodes[currentCardIdx];
 
       // 탭 활성화 상태 동기화
       var tabs = document.querySelectorAll('.cardnews-tab-btn');
       tabs.forEach(function (btn, i) {
-        if (i === idx) {
+        if (i === currentCardIdx) {
           btn.className = 'cardnews-tab-btn active whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-brand-navy text-white transition shadow-sm';
         } else {
           btn.className = 'cardnews-tab-btn whitespace-nowrap px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
@@ -2719,6 +2790,7 @@
 
       // 뷰어 DOM 갱신
       var imgEl = document.getElementById('cardnews-viewer-img');
+      var imgCounterEl = document.getElementById('cardnews-img-counter');
       var badgeEl = document.getElementById('cardnews-badge');
       var indEl = document.getElementById('cardnews-indicator');
       var titleEl = document.getElementById('cardnews-title-text');
@@ -2729,10 +2801,11 @@
         imgEl.src = d.img;
         imgEl.alt = d.title;
       }
-      if (badgeEl) badgeEl.innerText = d.badge;
-      if (indEl) indEl.innerText = (idx + 1) + ' / 5';
-      if (titleEl) titleEl.innerText = d.title;
-      if (descEl) descEl.innerText = d.desc;
+      if (imgCounterEl) imgCounterEl.textContent = (currentCardIdx + 1) + ' / ' + totalCardnews;
+      if (badgeEl) badgeEl.textContent = d.badge;
+      if (indEl) indEl.textContent = (currentCardIdx + 1) + ' / ' + totalCardnews;
+      if (titleEl) titleEl.textContent = d.title;
+      if (descEl) descEl.textContent = d.desc;
 
       if (pointsEl) {
         pointsEl.innerHTML = d.points.map(function (pt) {
@@ -2756,35 +2829,106 @@
     });
 
     window.stepCardnews = function (step) {
-      var next = (currentCardIdx + step + 5) % 5;
+      var next = (currentCardIdx + step + totalCardnews) % totalCardnews;
       renderCardnewsEpisode(next);
     };
 
     window.openCardnewsModalCurrent = function () {
-      var d = cardnewsEpisodes[currentCardIdx];
-      var modalTitle = document.getElementById('card-modal-title');
-      var modalBadge = document.getElementById('card-modal-badge');
-      var modalImg = document.getElementById('card-modal-img');
-
-      if (modalTitle) modalTitle.innerText = d.title;
-      if (modalBadge) modalBadge.innerText = d.badge + ' (' + (currentCardIdx + 1) + '/5)';
-      if (modalImg) modalImg.src = d.img;
-
+      updateCardModalUI();
       openModal('cardnews-modal');
     };
 
     window.stepCardnewsModal = function (step) {
       stepCardnews(step);
-      var d = cardnewsEpisodes[currentCardIdx];
-      var modalTitle = document.getElementById('card-modal-title');
-      var modalBadge = document.getElementById('card-modal-badge');
-      var modalImg = document.getElementById('card-modal-img');
-
-      if (modalTitle) modalTitle.innerText = d.title;
-      if (modalBadge) modalBadge.innerText = d.badge + ' (' + (currentCardIdx + 1) + '/5)';
-      if (modalImg) modalImg.src = d.img;
+      updateCardModalUI();
     };
 
+    window.goToCardnewsModal = function (idx) {
+      renderCardnewsEpisode(idx);
+      updateCardModalUI();
+    };
+
+    // 모바일 터치 스와이프(Swipe Left / Right) 및 키보드 화살표 통합 바인딩
+    (function initCardnewsSwipeAndKeys() {
+      function bindSwipe(el, onPrev, onNext) {
+        if (!el) return;
+        var startX = 0;
+        var startY = 0;
+        var tracking = false;
+
+        el.addEventListener('touchstart', function (e) {
+          if (!e.touches || e.touches.length !== 1) return;
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          tracking = true;
+        }, { passive: true });
+
+        el.addEventListener('touchmove', function (e) {
+          if (!tracking || !e.touches || e.touches.length !== 1) return;
+          var dx = e.touches[0].clientX - startX;
+          var dy = e.touches[0].clientY - startY;
+          // 수평 스와이프가 수직 스크롤보다 클 때 브라우저 기본 동작 방지
+          if (Math.abs(dx) > 15 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+            if (e.cancelable) e.preventDefault();
+          }
+        }, { passive: false });
+
+        el.addEventListener('touchend', function (e) {
+          if (!tracking || !e.changedTouches || !e.changedTouches.length) return;
+          tracking = false;
+          var dx = e.changedTouches[0].clientX - startX;
+          var dy = e.changedTouches[0].clientY - startY;
+          if (Math.abs(dx) >= 35 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) {
+              onNext();
+            } else {
+              onPrev();
+            }
+          }
+        }, { passive: true });
+      }
+
+      // DOM 로드 후 모달 및 인라인 뷰어에 스와이프 연결
+      function attachAllSwipes() {
+        var inlineStage = document.getElementById('cardnews-inline-stage');
+        var modalStage = document.getElementById('card-modal-stage');
+        var brochureStage = document.getElementById('brochure-slide-container');
+
+        bindSwipe(
+          inlineStage,
+          function () { window.stepCardnews(-1); },
+          function () { window.stepCardnews(1); }
+        );
+        bindSwipe(
+          modalStage,
+          function () { window.stepCardnewsModal(-1); },
+          function () { window.stepCardnewsModal(1); }
+        );
+        bindSwipe(
+          brochureStage,
+          function () { if (window.stepBrochurePage) window.stepBrochurePage(-1); },
+          function () { if (window.stepBrochurePage) window.stepBrochurePage(1); }
+        );
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachAllSwipes);
+      } else {
+        setTimeout(attachAllSwipes, 0);
+      }
+
+      // 키보드 좌우 화살표로 카드뉴스 모달 넘기기 지원
+      document.addEventListener('keydown', function (e) {
+        var cm = document.getElementById('cardnews-modal');
+        if (cm && !cm.classList.contains('hidden')) {
+          if (e.key === 'ArrowLeft') {
+            window.stepCardnewsModal(-1);
+          } else if (e.key === 'ArrowRight') {
+            window.stepCardnewsModal(1);
+          }
+        }
+      });
+    })();
 
     /* ===== 원클릭 글자 크기 조절 엔진 (localStorage 연동) ===== */
     (function initFontSizeController() {
@@ -3074,7 +3218,7 @@
   <!-- ========================================================================= -->
   <!-- [MODAL 1] 2026학년도 대입 합격 실적표 상세 팝업 (입학설명회 공식 발표 자료) -->
   <!-- ========================================================================= -->
-  <div id="admissions-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm overflow-y-auto p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="adm-modal-title">
+  <div id="admissions-modal" class="fixed inset-0 z-[70] hidden bg-slate-950/80 backdrop-blur-sm overflow-y-auto p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="adm-modal-title">
     <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-6 max-h-[90vh] flex flex-col">
       <!-- 모달 헤더 -->
       <div class="bg-brand-navy text-white p-5 flex items-start justify-between gap-3 flex-shrink-0">
@@ -3206,7 +3350,7 @@
   <!-- ========================================================================= -->
   <!-- [MODAL 2] 9:16 모바일 숏폼 릴스(Reels) 전용 세로 플레이어 모달 -->
   <!-- ========================================================================= -->
-  <div id="reels-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md p-2 sm:p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="reels-modal-title">
+  <div id="reels-modal" class="fixed inset-0 z-[70] hidden bg-slate-950/90 backdrop-blur-md p-2 sm:p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="reels-modal-title">
     <div class="relative w-full max-w-[380px] aspect-[9/16] max-h-[92vh] bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col">
       <!-- 릴스 상단 바 -->
       <div class="absolute top-0 left-0 right-0 z-20 p-3 bg-gradient-to-b from-slate-950/80 to-transparent flex items-center justify-between text-white">
@@ -3246,37 +3390,56 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- [MODAL 3] 카드뉴스 고화질 전체화면 확대 모달 -->
+  <!-- [MODAL 3] 카드뉴스 고화질 전체화면 확대 모달 (모바일 터치 스와이프 & 양옆 화살표 지원) -->
   <!-- ========================================================================= -->
-  <div id="cardnews-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md p-3 sm:p-5 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="card-modal-title">
-    <div class="relative w-full max-w-xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200 flex flex-col max-h-[92vh]">
+  <div id="cardnews-modal" class="fixed inset-0 z-[70] hidden bg-slate-950/90 backdrop-blur-md p-2 sm:p-5 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="card-modal-title">
+    <div class="relative w-full max-w-xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200 flex flex-col max-h-[92vh]" style="max-height: 90dvh;">
       <!-- 카드 모달 상단 -->
-      <div class="p-4 bg-slate-900 text-white flex items-center justify-between gap-3 flex-shrink-0">
-        <div>
-          <span id="card-modal-badge" class="bg-rose-500 text-white text-xs font-extrabold px-2 py-0.5 rounded-md">카드뉴스 확대 보기</span>
-          <h4 id="card-modal-title" class="text-sm font-bold truncate mt-1"></h4>
+      <div class="px-4 py-3 sm:p-4 bg-slate-900 text-white flex items-center justify-between gap-3 flex-shrink-0">
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-2">
+            <span id="card-modal-badge" class="bg-rose-500 text-white text-xs font-extrabold px-2 py-0.5 rounded-md">카드뉴스 확대 보기</span>
+            <span id="card-modal-counter" class="text-xs font-extrabold text-amber-300 tabular">1 / 7</span>
+          </div>
+          <h4 id="card-modal-title" class="text-xs sm:text-sm font-bold truncate mt-1"></h4>
         </div>
-        <button type="button" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition flex-shrink-0" onclick="closeModal('cardnews-modal')" aria-label="카드뉴스 닫기">
+        <button type="button" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition flex-shrink-0" onclick="closeModal('cardnews-modal')" aria-label="카드뉴스 닫기">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <!-- 카드 이미지 뷰어 -->
-      <div class="p-3 bg-slate-100 overflow-y-auto flex items-center justify-center">
-        <img id="card-modal-img" src="" alt="카드뉴스 확대 이미지" class="max-w-full max-h-[70vh] object-contain rounded-xl shadow-md border border-slate-200">
+      <!-- 카드 이미지 뷰어 (터치 스와이프 & 좌우 플로팅 버튼 내장) -->
+      <div id="card-modal-stage" class="relative p-2 sm:p-4 bg-slate-100 flex-1 min-h-0 flex items-center justify-center select-none overflow-hidden" style="touch-action: pan-y;">
+        <!-- 좌측 이전 장 플로팅 버튼 -->
+        <button type="button" onclick="event.stopPropagation(); stepCardnewsModal(-1);" class="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/70 hover:bg-slate-900 active:scale-95 text-white flex items-center justify-center shadow-lg border border-white/20 backdrop-blur-xs transition" aria-label="이전 장 보기">
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+
+        <img id="card-modal-img" src="assets/images/cardnews/card_01_cover.png" alt="카드뉴스 확대 이미지" class="max-w-full max-h-[62vh] sm:max-h-[68vh] object-contain rounded-xl shadow-md border border-slate-200 transition-opacity duration-150" style="max-height: 62dvh;" draggable="false">
+
+        <!-- 우측 다음 장 플로팅 버튼 -->
+        <button type="button" onclick="event.stopPropagation(); stepCardnewsModal(1);" class="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/70 hover:bg-slate-900 active:scale-95 text-white flex items-center justify-center shadow-lg border border-white/20 backdrop-blur-xs transition" aria-label="다음 장 보기">
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- 스와이프 안내 & 페이지 도트 인디케이터 -->
+      <div class="px-3 pt-2 pb-1 bg-white flex flex-col items-center gap-1 flex-shrink-0">
+        <div id="card-modal-dots" class="flex items-center justify-center gap-1.5"></div>
+        <p class="text-[11px] text-slate-400 font-medium">👆 화면을 좌우로 밀거나(스와이프) 화살표를 눌러 넘겨보세요</p>
       </div>
 
       <!-- 카드 모달 하단 내비게이션 -->
-      <div class="p-3 bg-white border-t border-slate-200 flex items-center justify-between gap-2 flex-shrink-0">
+      <div class="px-3 py-2.5 sm:p-3 bg-white border-t border-slate-200 flex items-center justify-between gap-2 flex-shrink-0">
         <div class="flex gap-2">
-          <button type="button" class="px-3 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 transition" onclick="stepCardnewsModal(-1)">
-            ← 이전 편
+          <button type="button" class="px-3.5 py-2 rounded-xl border border-slate-300 bg-slate-50 hover:bg-slate-100 active:scale-95 text-xs font-extrabold text-slate-800 transition flex items-center gap-1 shadow-2xs" onclick="stepCardnewsModal(-1)">
+            ← 이전 장
           </button>
-          <button type="button" class="px-3 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 transition" onclick="stepCardnewsModal(1)">
-            다음 편 →
+          <button type="button" class="px-3.5 py-2 rounded-xl bg-brand-navy hover:bg-slate-800 active:scale-95 text-xs font-extrabold text-white transition flex items-center gap-1 shadow-xs" onclick="stepCardnewsModal(1)">
+            다음 장 →
           </button>
         </div>
-        <button type="button" class="px-4 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition" onclick="closeModal('cardnews-modal')">
+        <button type="button" class="px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-extrabold transition" onclick="closeModal('cardnews-modal')">
           닫기
         </button>
       </div>
@@ -3284,10 +3447,9 @@
   </div>
 
   <!-- ========================================================================= -->
-    <!-- ========================================================================= -->
   <!-- [MODAL 4] 2027학년도 진해고등학교 신입생 입학안내 팸플릿 (공식 브로슈어 팝업) -->
   <!-- ========================================================================= -->
-  <div id="brochure-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md p-2 sm:p-4 md:p-6 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="brochure-modal-title">
+  <div id="brochure-modal" class="fixed inset-0 z-[70] hidden bg-slate-950/90 backdrop-blur-md p-2 sm:p-4 md:p-6 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="brochure-modal-title">
     <div class="relative w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200 flex flex-col max-h-[96vh]">
       
       <!-- 1. 브로슈어 상단 헤더 -->
