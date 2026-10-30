@@ -701,7 +701,7 @@
       <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-7 leading-relaxed intro-cascade intro-hero-desc">
         학년당 300명·10학급의 탄탄한 내신 모수,<br class="sm:hidden">
         153명 수용 기숙사(동백관·송학관)와<br>
-        평일 하루 5시간 자기주도학습으로 3년을 설계합니다.
+        평일 하루 4.5시간+(연장 시 최대 6.5시간) 자기주도학습으로 3년을 설계합니다.
       </p>
 
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 max-w-md sm:max-w-none mx-auto mb-8 intro-cascade intro-hero-cta">
@@ -756,7 +756,7 @@
       </div>
 
       <p class="text-sm sm:text-base text-slate-600 mt-3 mb-5 leading-relaxed">
-        출신 중학교 지역과 중학교 내신 석차백분율만 입력하면, <strong class="text-slate-800">관내 5% · 관외(원거리) 30% 우선입사</strong> 기준과 최근 일반입사 체감선(35~40%)에 비추어 바로 알려 드려요.
+        출신 중학교 지역과 중학교 내신 석차백분율만 입력하면, <strong class="text-slate-800">관내 우선(5%) · 작년 관내 합격선(약 16%) 및 관외 우선(30%)</strong> 기준에 비추어 바로 알려 드려요.
         <span class="text-slate-400">입력값은 저장·전송되지 않습니다.</span>
       </p>
 
@@ -891,7 +891,7 @@
         <div>
           <p class="text-xs font-bold text-indigo-600">기숙사 라이프</p>
           <h2 id="life-title" class="text-[19px] sm:text-2xl font-extrabold text-slate-900 mt-1 leading-snug">
-            기숙사생의 평일 하루,<br class="sm:hidden"> 자습만 5시간
+            기숙사생의 평일 하루,<br class="sm:hidden"> 매일 몰입 자습 4.5시간+
           </h2>
         </div>
         <span class="flex-shrink-0 bg-indigo-100 text-indigo-800 text-xs sm:text-sm font-bold px-2.5 py-1 rounded-full">관리되는 3년</span>
@@ -1008,7 +1008,7 @@
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-2.5 text-white">
                 <span class="text-xs text-indigo-300 font-extrabold uppercase">Daily Study</span>
-                <p class="text-xs font-bold leading-tight mt-0.5 group-hover:text-amber-300 transition line-clamp-2">밤 11:30까지 순공 5시간! 정독실 야자 브이로그</p>
+                <p class="text-xs font-bold leading-tight mt-0.5 group-hover:text-amber-300 transition line-clamp-2">밤 11:30까지 순공 4.5시간! 정독실 야자 브이로그</p>
                 <p class="text-xs text-slate-300 mt-1 truncate">#순공시간 #자기주도학습</p>
               </div>
             </div>
@@ -1071,18 +1071,23 @@
         </li>
         <li class="pl-5 relative reveal-item" data-slot="study1">
           <span class="routine-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand-blue ring-4 ring-white"></span>
-          <p class="text-xs sm:text-sm font-bold text-brand-blue tabular">18:30 ~ 21:30 <span class="ml-1 bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-xs">자습 3시간</span></p>
-          <p class="text-sm sm:text-base text-slate-800"><strong>학년 교실 야간 자율학습</strong></p>
+          <p class="text-xs sm:text-sm font-bold text-brand-blue tabular">18:30 ~ 21:00 <span class="ml-1 bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-xs">자습 2.5시간</span></p>
+          <p class="text-sm sm:text-base text-slate-800"><strong>1차 야간 자율학습 (학년 교실)</strong></p>
+        </li>
+        <li class="pl-5 relative reveal-item" data-slot="break">
+          <span class="routine-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white"></span>
+          <p class="text-xs sm:text-sm font-bold text-slate-500 tabular">21:00 ~ 21:30</p>
+          <p class="text-sm sm:text-base text-slate-800"><strong>휴식 · 이동 · 전자기기(휴대전화) 사용</strong></p>
         </li>
         <li class="pl-5 relative reveal-item" data-slot="study2">
           <span class="routine-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-indigo-600 ring-4 ring-white"></span>
           <p class="text-xs sm:text-sm font-bold text-indigo-600 tabular">21:30 ~ 23:30 <span class="ml-1 bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded text-xs">자습 2시간</span></p>
-          <p class="text-sm sm:text-base text-slate-800"><strong>기숙사 정독실(개인 지정 면학실) 자습</strong></p>
+          <p class="text-sm sm:text-base text-slate-800"><strong>2차 심야 자습 (기숙사 개인 지정 정독실)</strong></p>
         </li>
         <li class="pl-5 relative reveal-item" data-slot="sleep">
           <span class="routine-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white"></span>
           <p class="text-xs sm:text-sm font-bold text-slate-500 tabular">23:30</p>
-          <p class="text-sm sm:text-base text-slate-800"><strong>점호 · 소등</strong> <span class="text-slate-500 text-sm sm:text-base">(3학년 희망자 심야 연장 자습)</span></p>
+          <p class="text-sm sm:text-base text-slate-800"><strong>점호 · 소등</strong> <span class="text-slate-500 text-sm sm:text-base">(희망자 연장 자습: 1·2학년 01:00 / 3학년 01:30까지)</span></p>
         </li>
       </ol>
 
@@ -1116,7 +1121,7 @@
         <div class="bg-slate-50 rounded-2xl p-3.5 reveal-item">
           <p class="text-xs sm:text-sm font-bold text-slate-500">의약학 계열</p>
           <p class="text-3xl sm:text-4xl font-black text-brand-blue mt-1 tabular">4<span class="text-sm font-bold ml-0.5">명</span></p>
-          <p class="text-xs sm:text-sm text-slate-400 mt-0.5">의예 3 · 한약수 1</p>
+          <p class="text-xs sm:text-sm text-slate-400 mt-0.5">의예 3 · 치·한·약 1</p>
         </div>
         <div class="bg-slate-50 rounded-2xl p-3.5 reveal-item">
           <p class="text-xs sm:text-sm font-bold text-slate-500">사관학교</p>
@@ -1132,15 +1137,11 @@
       <p class="text-xs sm:text-sm text-slate-500 mt-3">※ 2026학년도 대입 결과, 학교 자체 집계 기준(중복 합격 및 재수/N수생 포함). 세부 진학 결과는 아래 공식 발표 자료를 참조하세요.</p>
 
       <!-- [NEW] 대입 실적표 공식 PPT 발표자료 팝업 버튼 -->
-      <div class="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-        <button type="button" id="open-results-modal" class="flex-1 inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-slate-800 active:scale-[.99] text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-md transition text-xs sm:text-sm">
+      <div class="mt-4">
+        <button type="button" id="open-results-modal" class="w-full inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-slate-800 active:scale-[.99] text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-md transition text-xs sm:text-sm">
           <i data-lucide="table" class="w-4 h-4 text-amber-300"></i>
           <span>전년도 대입 결과표 상세 보기 (입학설명회 공식 PPT 자료)</span>
         </button>
-        <a href="tel:0555462260" class="inline-flex items-center justify-center gap-1.5 py-3.5 px-4 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm transition">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-blue"></i>
-          <span>진학지도부 상담</span>
-        </a>
       </div>
 
       <div class="mt-4 p-4 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-start gap-3">
@@ -1504,9 +1505,10 @@
       else if (m < at(8)) { text = '기상 · 아침 점호 · 조식'; slot = 'wake'; }
       else if (m < at(16, 30)) { text = '정규 수업 중'; slot = 'class'; }
       else if (m < at(18, 30)) { text = '석식 · 휴식 시간'; }
-      else if (m < at(21, 30)) { text = '교실 야간 자율학습 중'; slot = 'study1'; }
-      else if (m < at(23, 30)) { text = '기숙사 정독실 자습 중'; slot = 'study2'; }
-      else { text = '소등 · 3학년 희망자 심야 자습'; slot = 'sleep'; }
+      else if (m < at(21))     { text = '1차 교실 야간 자율학습 중'; slot = 'study1'; }
+      else if (m < at(21, 30)) { text = '휴식 · 휴대전화 사용 시간'; slot = 'break'; }
+      else if (m < at(23, 30)) { text = '2차 기숙사 정독실 자습 중'; slot = 'study2'; }
+      else { text = '소등 · 희망자 연장 자습(1·2학년 01:00 / 3학년 01:30)'; slot = 'sleep'; }
 
       return { text: text, slot: slot, hour: k.getUTCHours(), hm: pad(k.getUTCHours()) + ':' + pad(k.getUTCMinutes()) };
     }
@@ -1594,55 +1596,97 @@
           tone: 'priority', badge: '우선입사 대상', title: '다자녀 가구 셋째(이상) 자녀 우선입사',
           desc: '다자녀 가구의 셋째(이상) 자녀는 신입생 기숙사 <strong>우선입사 대상</strong>으로, 중학교 내신 40%를 벗어나더라도 입사가 가능합니다.' +
             (meetsPriority ? ' 입력하신 ' + pTxt + '는 ' + r.quota + ' 기준도 함께 충족합니다.' : ''),
-          note: '1학년 2학기부터는 재학생 기준(고교 학기말 성적 + 전국연합학력평가)으로 다시 선발되므로, 기준에 미달하면 퇴사할 수 있어요.'
+          note: '1학년 2학기부터는 재학생 기준(고교 학기말 성적 + 전국연합학력평가)으로 다시 선발되므로 꾸준한 성적 관리가 권장됩니다.'
         };
       }
-      if (meetsPriority) {
+
+      if (regionKey === 'in') {
+        // [진해 관내] 작년 기준 컷오프 약 16% 반영
+        if (p <= 5) {
+          return {
+            tone: 'priority', badge: '우선입사 확실권', title: '관내 성적우수자 우선입사(5% 이내) 충족',
+            desc: '진해 관내 출신 기준 우선입사선(5% 이내)에 입력하신 <strong>' + pTxt + '</strong>가 들어옵니다. 성적우수자전형 우선입사 대상자로 합격 가능성이 매우 높습니다.',
+            note: '기숙사 합격자는 2월 초 학교 누리집(홈페이지)에 공지됩니다.'
+          };
+        }
+        if (p <= 16) {
+          return {
+            tone: 'good', badge: '일반입사 안정권', title: '작년 커트라인(약 16%) 이내 안정권',
+            desc: '우선입사선(5%)은 초과하지만, <strong>작년 기준 관내 합격선이 약 16%에서 마감</strong>되었으므로 일반전형으로 입사할 가능성이 매우 높습니다. 입력하신 <strong>' + pTxt + '</strong>는 안정권 범위 안쪽입니다.',
+            note: '체감 합격선은 해마다 지원자 수와 성적 분포에 따라 다소 달라질 수 있습니다.'
+          };
+        }
+        if (p <= 25) {
+          return {
+            tone: 'mid', badge: '경합 · 추가합격 대기권', title: '작년 컷오프(16%) 경계 및 결원 대기권',
+            desc: '입력하신 <strong>' + pTxt + '</strong>는 작년 관내 커트라인(약 16%)을 다소 초과하는 경합 구간입니다. 당해 지원자 풀에 따라 정규 선발 또는 결원 발생 시 <strong>충원 입사(대기자 선발)</strong>를 기대해 볼 수 있는 구간이니 입사 신청서를 꼭 제출해 두세요.',
+            note: '신입생 결원 발생 시 기숙사운영위원회 규정에 따라 대기 순번대로 충원 입사를 진행합니다.'
+          };
+        }
         return {
-          tone: 'priority', badge: '우선입사 안정권', title: r.quota + ' 기준 충족',
-          desc: r.name + ' 출신 기준 우선입사선(' + r.priority + '% 이내)에 입력하신 <strong>' + pTxt + '</strong>가 들어옵니다. 성적우수자전형 우선입사 대상으로 입사 가능성이 매우 높습니다.',
-          note: '관내·관외 간 우선순위는 고정 기준 없이 필요 시 기숙사운영위원회에서 결정합니다.'
+          tone: 'hard', badge: '도전권', title: '도전권 · 1학년 2학기 재선발 기회',
+          desc: '입력하신 <strong>' + pTxt + '</strong>는 최근 관내 합격선(작년 약 16%)과 비교할 때 1학기 신입생 일반전형 선발 가능성이 다소 낮을 수 있습니다. 그래도 입사 신청서를 접수해 두면 결원 시 충원 대상이 되며, <strong>1학년 2학기부터는 고교 내신과 전국연합학력평가 성적으로 새롭게 전원 재선발</strong>합니다.',
+          note: '통학 및 교실 야간 자율학습 참여 등 대안은 교무실(055-546-2260)에서 친절히 안내해 드립니다.'
         };
-      }
-      if (p <= 35) {
+      } else {
+        // [원거리 및 관외] 원거리 우선입사(30% 이내)
+        if (p <= 30) {
+          return {
+            tone: 'priority', badge: '원거리 우선입사 안정권', title: r.quota + ' 충족',
+            desc: r.name + ' 출신 기준 원거리 통학 우선입사선(30% 이내)에 입력하신 <strong>' + pTxt + '</strong>가 들어옵니다. 원거리 우대선발 대상으로 입사 가능성이 매우 높습니다.',
+            note: '원거리 학생들의 통학 편의를 위해 우선 배정 혜택을 제공하고 있습니다.'
+          };
+        }
+        if (p <= 40) {
+          return {
+            tone: 'mid', badge: '원거리 경합권', title: '원거리 일반전형 경합권',
+            desc: '원거리 우선입사선(30%)은 다소 벗어나지만, 원거리 통학 여건을 감안한 일반전형 경합 구간입니다. 결원 발생 시 충원 입사를 기대할 수 있으니 신청서를 제출해 두세요.',
+            note: '결원이 생기면 학기별 충원 입사를 진행합니다.'
+          };
+        }
         return {
-          tone: 'good', badge: '일반입사 가능권', title: '일반전형 입사 가능권',
-          desc: '우선입사 기준(' + r.priority + '%)은 넘지만, 최근 몇 년간 우선입사자만으로 정원이 차지 않아 <strong>내신 35~40% 수준까지 일반전형으로 입사</strong>해 왔습니다. 입력하신 ' + pTxt + '는 이 범위 안쪽입니다.',
-          note: '체감 합격선은 해마다 지원자 수와 성적 분포에 따라 달라집니다.'
+          tone: 'hard', badge: '도전권', title: '도전권 · 1학년 2학기 재선발 기회',
+          desc: '입력하신 <strong>' + pTxt + '</strong>는 원거리 선발 기준선 바깥입니다. 결원 시 충원 대상이 되며, 1학년 2학기부터는 고교 성적 기준으로 다시 선발합니다.',
+          note: '통학 상담은 교무실(055-546-2260)에서 자세히 안내해 드립니다.'
         };
       }
-      if (p <= 40) {
-        return {
-          tone: 'mid', badge: '경합권', title: '일반전형 경합권 (체감선 35~40% 구간)',
-          desc: '입력하신 ' + pTxt + '는 최근 체감 합격선의 경계 구간입니다. 당해 지원 현황에 따라 결과가 갈릴 수 있으니 <strong>입사 신청서는 꼭 제출</strong>해 두세요.',
-          note: '결원이 생기면 학기별 1회(4월 1일·10월 1일) 기존 신청자를 대상으로 충원 입사를 진행합니다.'
-        };
-      }
-      return {
-        tone: 'hard', badge: '도전권', title: '도전권 · 충원 입사와 2학기 재선발 기회',
-        desc: '입력하신 ' + pTxt + '는 최근 체감 합격선(35~40%) 바깥입니다. 그래도 입사 신청서를 내 두면 결원 시 <strong>학기별 1회(4월 1일·10월 1일) 충원 입사</strong> 대상이 되고, 1학년 2학기부터는 고교 성적·모의고사 기준(석차 40% 내외)으로 다시 선발합니다.',
-        note: '통학·자습 지원 등은 교무실(055-546-2260)에서 자세히 상담해 드립니다.'
-      };
     }
 
-    function gaugeHTML(p, priority) {
+    function gaugeHTML(p, priority, regionKey) {
       var w = function (a, b) { return ((b - a) / GAUGE_MAX * 100).toFixed(2) + '%'; };
       var left = (Math.min(p, GAUGE_MAX) / GAUGE_MAX * 100).toFixed(2) + '%';
-      var mid = Math.max(priority, 35);
+      if (regionKey === 'in') {
+        return '' +
+          '<div class="mt-4" aria-hidden="true">' +
+            '<div class="relative h-3 rounded-full overflow-hidden flex">' +
+              '<span class="h-full bg-emerald-400" style="width:' + w(0, 5) + '"></span>' +
+              '<span class="h-full bg-blue-400" style="width:' + w(5, 16) + '"></span>' +
+              '<span class="h-full bg-amber-300" style="width:' + w(16, 25) + '"></span>' +
+              '<span class="h-full bg-rose-300" style="width:' + w(25, GAUGE_MAX) + '"></span>' +
+            '</div>' +
+            '<div class="relative h-0">' +
+              '<span class="gauge-marker absolute -top-[18px] -translate-x-1/2 w-1 h-6 rounded-full bg-slate-900 ring-2 ring-white" style="left:0%" data-left="' + left + '"></span>' +
+            '</div>' +
+            '<div class="relative mt-1.5 h-4 text-xs text-slate-500 tabular">' +
+              '<span class="absolute -translate-x-1/2" style="left:' + w(0, 5) + '">5%</span>' +
+              '<span class="absolute -translate-x-1/2" style="left:' + w(0, 16) + '">16%(작년컷)</span>' +
+              '<span class="absolute -translate-x-1/2" style="left:' + w(0, 25) + '">25%</span>' +
+              '<span class="absolute right-0">' + GAUGE_MAX + '%+</span>' +
+            '</div>' +
+          '</div>';
+      }
       return '' +
         '<div class="mt-4" aria-hidden="true">' +
           '<div class="relative h-3 rounded-full overflow-hidden flex">' +
-            '<span class="h-full bg-emerald-400" style="width:' + w(0, priority) + '"></span>' +
-            (priority < 35 ? '<span class="h-full bg-blue-400" style="width:' + w(priority, 35) + '"></span>' : '') +
-            '<span class="h-full bg-amber-300" style="width:' + w(mid, 40) + '"></span>' +
+            '<span class="h-full bg-emerald-400" style="width:' + w(0, 30) + '"></span>' +
+            '<span class="h-full bg-amber-300" style="width:' + w(30, 40) + '"></span>' +
             '<span class="h-full bg-rose-300" style="width:' + w(40, GAUGE_MAX) + '"></span>' +
           '</div>' +
           '<div class="relative h-0">' +
             '<span class="gauge-marker absolute -top-[18px] -translate-x-1/2 w-1 h-6 rounded-full bg-slate-900 ring-2 ring-white" style="left:0%" data-left="' + left + '"></span>' +
           '</div>' +
           '<div class="relative mt-1.5 h-4 text-xs text-slate-500 tabular">' +
-            '<span class="absolute -translate-x-1/2" style="left:' + w(0, priority) + '">' + priority + '%</span>' +
-            (priority < 30 ? '<span class="absolute -translate-x-1/2" style="left:' + w(0, 35) + '">35%</span>' : '') +
+            '<span class="absolute -translate-x-1/2" style="left:' + w(0, 30) + '">30%</span>' +
             '<span class="absolute -translate-x-1/2" style="left:' + w(0, 40) + '">40%</span>' +
             '<span class="absolute right-0">' + GAUGE_MAX + '%+</span>' +
           '</div>' +
@@ -1673,7 +1717,7 @@
             '<p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">💡 ' + res.note + '</p>' +
           '</div>' +
         '</div>' +
-        gaugeHTML(parsed.value, REGION[region].priority) +
+        gaugeHTML(parsed.value, REGION[region].priority, region) +
         '<div class="mt-4 pt-3 border-t border-slate-900/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">' +
           '<span class="text-xs sm:text-sm text-slate-500">※ 참고용 진단이며, 최종 선발은 2027학년도 기숙사 입사 요강과 기숙사운영위원회 사정에 따릅니다. 기숙사 합격자는 2월 초 누리집에 공지됩니다.</span>' +
           '<button type="button" data-chat="기숙사 신입생 선발 기준과 충원 입사 절차를 자세히 알려줘" class="flex-shrink-0 inline-flex items-center justify-center gap-1 text-sm sm:text-base font-bold text-brand-blue bg-white border border-blue-200 px-3 py-2 rounded-xl hover:bg-blue-50">' +
@@ -1718,23 +1762,39 @@
     var dormTabData = [
       {
         icon: 'building-2',
-        title: '동백관 · 신축 기숙사 (1·2학년 3인 1실, 117명)',
-        items: ['1·2학년 전원이 같은 학년끼리 3인 1실로 생활합니다.', '신입생 호실은 무작위 배정이 원칙이며, 성적순 방 배정은 일절 하지 않습니다.', '침실은 휴식 전용 공간, 공부는 교실과 정독실에서 합니다.']
+        title: '동백관 · 신축 기숙사 (1·2학년 3인 1실, 각 51명 / 3학년 일부)',
+        items: [
+          '1·2학년 전원(각 51명) 및 3학년 일부 학생이 3인 1실로 생활합니다.',
+          '심화실을 쓰는 학생들의 경우 동선을 고려해 지정 호실군 내에서 배정하며, 그 외 일반 호실은 공정하게 무작위 배정합니다.',
+          '침실은 휴식 전용 공간이며, 학습은 교실과 정독실에서 이루어집니다.'
+        ]
       },
       {
         icon: 'house',
-        title: '송학관 · 3학년 면학관 (2인 1실, 36명)',
-        items: ['3학년이 2인 1실로 생활하며 수험 생활에 집중합니다.', '소등(23:30) 이후에도 3학년 희망자는 심야 연장 자습이 가능합니다.', '3학년 일부 학생은 동백관에서 생활할 수 있습니다.']
+        title: '송학관 · 3학년 면학관 (3학년 2인 1실)',
+        items: [
+          '3학년 학생들이 2인 1실로 생활하며 수험 생활에 집중합니다.',
+          '소등(23:30) 이후에도 희망자는 정독실에서 연장 자습(1·2학년 01:00, 3학년 01:30까지)이 가능합니다.',
+          '3학년(51명)은 정원에 따라 동백관(3인 1실)과 송학관(2인 1실)에 나누어 배정됩니다.'
+        ]
       },
       {
         icon: 'book-open',
         title: '정독실 · 기숙사생 전용 개인 지정 면학실',
-        items: ['평일 21:30부터 기숙사생 전원이 개인 지정석에서 자습합니다.', '인강용 태블릿은 사전 등록 없이 기숙사 공용 Wi-Fi로 이용합니다.', '학습실 외 장소(호실·복도)에서의 전자기기 사용은 엄격히 금지됩니다.']
+        items: [
+          '1차 교실 야자(18:30~21:00) 및 휴식 후 21:30부터 기숙사생 전원이 개인 지정석에서 자습합니다.',
+          '휴대전화는 정해진 시간(21:00~21:30)에만 사용 가능하며, 사용 종료 후 전용 보관함에 안전하게 보관합니다.',
+          '인강용 태블릿은 학습실 내에서만 허용되며, 호실·복도 등 학습실 외 공간에서의 전자기기 소지 및 사용은 엄격히 금지됩니다.'
+        ]
       },
       {
         icon: 'utensils',
         title: '기숙사비 · 급식비 (2026학년도 기준)',
-        items: ['기숙사비(순수 관리비) 월 81,000원, 스쿨뱅킹 자동 납부 (2027학년도 다소 인상 예정)', '조식·석식 1식 6,000원 (수익자 부담)', '중식은 무상급식이 적용됩니다.']
+        items: [
+          '기숙사비(순수 관리비) 월 81,000원, 스쿨뱅킹 자동 납부 (2027학년도 다소 변경될 수 있음)',
+          '조식·석식 1식 6,000원 (수익자 부담)',
+          '중식은 무상급식이 적용됩니다.'
+        ]
       }
     ];
     var tabButtons = Array.prototype.slice.call(document.querySelectorAll('.dorm-tab-btn'));
@@ -1778,22 +1838,22 @@
       {
         tag: '호실배정',
         q: '기숙사 호실 배정은 어떻게 하나요? 성적순으로 방을 나누나요?',
-        a: '<strong>성적순 배정이 절대 아닙니다.</strong> 1·2학년은 동백관(3인 1실), 3학년은 송학관(2인 1실)을 사용하며, 특정 출신 중학교 학생끼리만 치우치지 않도록 <strong>무작위 균등 배정</strong>을 원칙으로 하여 신입생들의 빠른 친교와 적응을 돕습니다.'
+        a: '1·2학년은 동백관(3인 1실), 3학년은 동백관(3인 1실)과 송학관(2인 1실)에 나누어 배정됩니다. <strong>심화실을 쓰는 학생들의 경우 이동 동선과 학습 효율을 위해 몇 개의 호실을 정해두고 그 안에서 배정</strong>하며, <strong>심화실을 제외한 나머지 일반 호실들은 공정하게 무작위로 배정</strong>됩니다.'
       },
       {
         tag: '야자규정',
         q: '기숙사생이 아닌 일반 통학생도 야간자율학습(야자)을 강제로 해야 하나요?',
-        a: '<strong>희망자 자율 참여 원칙</strong>입니다. 강제 야자는 일체 운영하지 않으며, 통학생도 본인 희망 시 담당 교사의 지도 아래 학년 교실 및 전용 자율학습실에서 안심하고 밤 21:30까지 면학에 집중할 수 있습니다.'
+        a: '<strong>희망자 자율 참여 원칙</strong>입니다. 강제 야자는 일체 운영하지 않으며, 통학생도 본인 희망 시 담당 교사의 지도 아래 학년 교실에서 안심하고 밤 21:00까지 면학에 집중할 수 있습니다.'
       },
       {
         tag: '전자기기',
-        q: '기숙사나 자습 시간에 인강용 태블릿PC나 스마트폰 사용이 가능한가요?',
-        a: '정독실에서 인터넷 강의 수강 및 학업 목적의 <strong>태블릿PC 사용은 자유롭게 허용</strong>됩니다. 단, 심야 수면권 보장과 몰입 면학을 위해 <strong>밤 23:30 취침 소등 시 휴대폰은 전용 보관함에 반납·보관</strong>하며, 취침 호실 내 오락 목적의 전자기기 사용은 엄격히 지도합니다.'
+        q: '기숙사 자습 시간에 인강용 태블릿PC나 스마트폰 사용이 가능한가요?',
+        a: '휴대전화는 <strong>정해진 시간(21:00~21:30)에만 사용</strong>할 수 있으며, 사용 시간이 끝나면 전용 보관함에 보관해야 합니다. 정독실 내 인강용 태블릿PC 사용은 학습 목적으로 자유롭게 허용되나, <strong>전자기기는 학습실 외 공간(호실·복도)에서의 사용뿐만 아니라 소지 자체가 엄격히 금지</strong>됩니다.'
       },
       {
         tag: '주말귀가',
         q: '주말(토/일)에도 기숙사에 계속 머물 수 있나요? 외출·외박 규정은 어떤가요?',
-        a: '기숙사 환경 소독 및 방역, 학생 재충전을 위해 <strong>원칙적으로 금요일 하교 후 전원 귀가</strong>하며, <strong>일요일 저녁 18:30~21:00 사이에 재입사</strong>합니다. <strong>시험 기간에도 주말 기숙사 잔류는 불가</strong>하므로 주말에는 가정에서 학업과 휴식을 병행하게 됩니다.'
+        a: '학생 안전 관리와 기숙사 환경 소독 및 재충전을 위해 <strong>원칙적으로 금요일 하교 후 전원 귀가</strong>하며, 일요일 저녁 18:30~21:00 사이에 재입사합니다. <strong>안전상의 이유로 시험 기간을 포함하여 주말 기숙사 잔류는 일절 불가</strong>합니다.'
       },
       {
         tag: '관외지원',
@@ -1802,8 +1862,8 @@
       },
       {
         tag: '복장규정',
-        q: '교복 디자인과 복장 규정은 어떤가요? 편한 생활복이나 후드티 등교가 되나요?',
-        a: '단정한 정장형 동복·하복 외에도 학생들의 활동성과 편의를 극대화하기 위해 <strong>실용적인 학교 생활복 및 학교 지정 후드티 등교가 전면 허용</strong>되어 있습니다. 남학생들이 하루 종일 쾌적하게 학습과 체육 활동에 몰입할 수 있습니다.'
+        q: '교복 디자인과 복장 규정은 어떤가요? 편한 생활복 등교가 되나요?',
+        a: '단정한 정장형 동복·하복 착용이 원칙이며, <strong>생활복 등교는 학생 생활 규정에 따라 매주 수요일 및 정기고사(시험) 기간에 한하여 단정하게 착용</strong>할 수 있습니다.'
       },
       {
         tag: '심화학습',
@@ -1813,12 +1873,12 @@
       {
         tag: '제2외국어',
         q: '제2외국어는 일본어 외에 다른 과목도 배울 수 있나요?',
-        a: '현재 정규 교육과정에는 <strong>일본어(일본어Ⅰ·Ⅱ)</strong>가 개설되어 운영 중입니다. 다만 학생들의 선택 수요가 충분할 경우 공동교육과정 또는 학교 간 개설 연계를 통해 타 과목도 추가 개설될 수 있으므로, 입학 후 교육과정부와 상담하실 수 있습니다.'
+        a: '2022 개정 교육과정에 맞추어 현재 본교 정규 교육과정에는 <strong>일본어와 일본어 회화</strong>가 개설되어 운영 중입니다. 학생들의 선택 수요가 충분할 경우 공동교육과정 또는 학교 간 개설 연계를 통해 타 과목도 추가 개설될 수 있으므로, 입학 후 교육과정부와 상담하실 수 있습니다.'
       },
       {
         tag: '기숙사환불',
         q: '기숙사에 살다가 맞지 않으면 중도 퇴사할 수 있나요? 비용 환불은 어떻게 되나요?',
-        a: '기숙사 퇴사는 <strong>월말을 원칙</strong>으로 하며, <strong>월초 및 중간에 명령 퇴사 및 자진 퇴사할 경우 기숙사비와 급식비는 환불되지 않습니다.</strong> 입사 시 신중하게 검토 후 결정해 주시기 바랍니다.'
+        a: '기숙사 납부금은 매월 징수함을 원칙으로 하고 있고, 월중 중도 전입(입사) 및 퇴사의 경우에만 일할 계산하여 징수하고 있습니다. 기숙사 퇴사는 <strong>월말을 원칙</strong>으로 하며, <strong>월초 및 중간에 명령 퇴사 및 자진 퇴사할 경우 특별한 사유를 제외하고는 기숙사비와 급식비는 환불되지 않습니다.</strong>'
       }
     ];
 
@@ -2331,13 +2391,11 @@
       }
     });
 
-    // 백드롭 클릭 시 닫기
-    ['admissions-modal', 'reels-modal', 'cardnews-modal', 'brochure-modal'].forEach(function (id) {
-      var m = document.getElementById(id);
-      if (m) {
-        m.addEventListener('click', function (e) {
-          if (e.target === m) closeModal(id);
-        });
+    // 백드롭 클릭 시 닫기 (이벤트 위임 방식으로 동적/지연 렌더링 모달 완벽 대응)
+    var MODAL_IDS = ['admissions-modal', 'reels-modal', 'cardnews-modal', 'brochure-modal'];
+    document.addEventListener('click', function (e) {
+      if (e.target && MODAL_IDS.indexOf(e.target.id) !== -1) {
+        closeModal(e.target.id);
       }
     });
 
@@ -2500,7 +2558,15 @@
           url: window.location.href
         }).catch(function () {});
       } else {
-        alert('릴스 링크가 클립보드에 복사되었습니다.');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(window.location.href.split('#')[0]).then(function () {
+            alert('릴스 링크가 클립보드에 복사되었습니다.');
+          }).catch(function () {
+            prompt('아래 링크를 복사해 주세요:', window.location.href.split('#')[0]);
+          });
+        } else {
+          prompt('아래 링크를 복사해 주세요:', window.location.href.split('#')[0]);
+        }
       }
     };
 
@@ -2536,7 +2602,7 @@
         points: [
           '<strong>연 1억 원 장학 혜택:</strong> 중학교 내신 우수 입학생 및 학업 성취 우수자 대상 집중 지급',
           '<strong>진해인재스쿨 심화반:</strong> 방과 후 및 주말을 활용한 국·영·수 심화 클리닉 운영',
-          '<strong>1:1 대입 컨설팅:</strong> 전문 입시 컨설턴트 및 진학지도부 교사의 상시 학생부 디자인'
+          '<strong>1:1 대입 컨설팅:</strong> 전문 입시 컨설턴트 및 3학년 진학 지도 교사의 상시 학생부 디자인'
         ]
       },
       {
@@ -2545,7 +2611,7 @@
         desc: '수시(학생부종합·교과)와 정시(수능) 투트랙 지도로 2026학년도 서울대 1명, 의예과 3명, 치·한·약 1명, 사관학교 7명(해사 6, 육사 1), 연고대 4명, 수도권 주요대 32명, 거점국립대 86명 이상의 압도적인 합격 실적을 거두었습니다.',
         img: 'assets/images/cardnews/card_04_admissions.png',
         points: [
-          '<strong>의약학 계열 4명 합격:</strong> 의예과 3명(본교 진학지도부 공식 집계 기준) 및 약학 1명',
+          '<strong>의약학 계열 4명 합격:</strong> 의예과 3명 및 치·한·약 1명(본교 공식 집계 기준)',
           '<strong>해군사관학교 6명 배출:</strong> 해군 도시 진해의 이점을 살린 사관학교 특별 집중 대비반',
           '<strong>수시 · 정시 균형 진학:</strong> 탄탄한 내신 모수를 기반으로 학생부종합과 수능 최저 동시 석권'
         ]
@@ -2899,7 +2965,7 @@
           <h3 id="adm-modal-title" class="text-lg sm:text-xl font-extrabold leading-snug">
             진해고등학교 2026학년도 대입 합격 실적 상세표
           </h3>
-          <p class="text-xs text-blue-200 mt-0.5">본교 진학지도부 공식 집계 (2026. 10. 22. 신입생 입학설명회 기준)</p>
+          <p class="text-xs text-blue-200 mt-0.5">본교 공식 집계 (2026. 10. 22. 신입생 입학설명회 기준)</p>
         </div>
         <button type="button" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition flex-shrink-0" onclick="closeModal('admissions-modal')" aria-label="팝업 닫기">
           <i data-lucide="x" class="w-5 h-5"></i>
@@ -2908,45 +2974,35 @@
 
       <!-- 모달 본문 (스크롤 가능) -->
       <div class="p-5 overflow-y-auto space-y-4 text-slate-800 text-xs sm:text-sm">
-        <!-- 1. 최상위권 의약학 & 서울대 & 사관학교 -->
+        <!-- 1. 최상위권 특성화대 · 서울대 · 의약학 · 사관학교 (주요 실적 14명) -->
         <div class="rounded-2xl border border-blue-200 bg-blue-50/60 p-4">
           <div class="flex items-center justify-between mb-2.5">
             <h4 class="font-extrabold text-blue-950 flex items-center gap-1.5 text-sm">
               <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
-              최상위권 의약학 · 서울대 · 사관학교
+              최상위권 특성화대 · 서울대 · 의약학 · 사관학교
             </h4>
             <span class="text-xs sm:text-sm font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full">주요 실적 14명</span>
           </div>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div class="bg-white p-2.5 rounded-xl border border-blue-100">
+              <span class="text-xs sm:text-sm text-slate-500 font-bold block">이공계 특성화대</span>
+              <span class="text-base font-extrabold text-purple-700">2명 합격</span>
+              <span class="text-xs text-slate-400 block mt-0.5">UNIST · DGIST</span>
+            </div>
             <div class="bg-white p-2.5 rounded-xl border border-blue-100">
               <span class="text-xs sm:text-sm text-slate-500 font-bold block">서울대학교</span>
               <span class="text-base font-extrabold text-brand-navy">1명 합격</span>
               <span class="text-xs text-slate-400 block mt-0.5">일반전형</span>
             </div>
             <div class="bg-white p-2.5 rounded-xl border border-blue-100">
-              <span class="text-xs sm:text-sm text-slate-500 font-bold block">의예과</span>
-              <span class="text-base font-extrabold text-blue-600">3명 합격</span>
-              <span class="text-xs text-slate-400 block mt-0.5">본교 진학지도부 공식 집계 기준</span>
+              <span class="text-xs sm:text-sm text-slate-500 font-bold block">의약학 계열</span>
+              <span class="text-base font-extrabold text-blue-600">4명 합격</span>
+              <span class="text-xs text-slate-400 block mt-0.5">의예 3명 · 치·한·약 1명</span>
             </div>
             <div class="bg-white p-2.5 rounded-xl border border-blue-100">
-              <span class="text-xs sm:text-sm text-slate-500 font-bold block">치·한·약학</span>
-              <span class="text-base font-extrabold text-indigo-600">1명 합격</span>
-              <span class="text-xs text-slate-400 block mt-0.5">의약학계열 총 4명</span>
-            </div>
-            <div class="bg-white p-2.5 rounded-xl border border-blue-100">
-              <span class="text-xs sm:text-sm text-slate-500 font-bold block">해군사관학교</span>
-              <span class="text-base font-extrabold text-emerald-700">6명 합격</span>
-              <span class="text-xs text-slate-400 block mt-0.5">해군 특화 맞춤형 대비</span>
-            </div>
-            <div class="bg-white p-2.5 rounded-xl border border-blue-100">
-              <span class="text-xs sm:text-sm text-slate-500 font-bold block">육군사관학교</span>
-              <span class="text-base font-extrabold text-emerald-700">1명 합격</span>
-              <span class="text-xs text-slate-400 block mt-0.5">사관학교 총 7명</span>
-            </div>
-            <div class="bg-white p-2.5 rounded-xl border border-blue-100">
-              <span class="text-xs sm:text-sm text-slate-500 font-bold block">이공계 특성화대</span>
-              <span class="text-base font-extrabold text-purple-700">2명 합격</span>
-              <span class="text-xs text-slate-400 block mt-0.5">UNIST, DGIST</span>
+              <span class="text-xs sm:text-sm text-slate-500 font-bold block">사관학교</span>
+              <span class="text-base font-extrabold text-emerald-700">7명 합격</span>
+              <span class="text-xs text-slate-400 block mt-0.5">해사 6명 · 육사 1명</span>
             </div>
           </div>
         </div>
@@ -3014,18 +3070,15 @@
           <p class="font-bold flex items-center gap-1 text-amber-900">
             <i data-lucide="info" class="w-3.5 h-3.5"></i> 투명한 집계 기준 안내
           </p>
-          <p>• 본 통계는 본교 진학지도부 자체 집계(합격증 기준)로, 해당 학년도 재학생 및 졸업생(재수/N수생) 실적이 포함되어 있습니다.</p>
+          <p>• 본 통계는 본교 공식 자체 집계(합격증 기준)로, 해당 학년도 재학생 및 졸업생(재수/N수생) 실적이 포함되어 있습니다.</p>
           <p>• 수시/정시 특성상 1명의 학생이 여러 대학에 합격한 중복 합격 건수가 포함되어 있습니다.</p>
-          <p>• 학생 개인별 내신 등급대별 진학 사례와 2028 개편 대입 맞춤형 학생부 전략은 교무실 진학지도부(055-546-2260)에서 개별 상담을 지원합니다.</p>
+          <p>• 학생 개인별 내신 등급대별 진학 사례와 2028 개편 대입 맞춤형 학생부 전략은 본교 교무실(055-546-2260)에서 개별 안내를 지원합니다.</p>
         </div>
       </div>
 
       <!-- 모달 푸터 -->
-      <div class="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between gap-2 flex-shrink-0">
-        <a href="tel:0555462260" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:underline">
-          <i data-lucide="phone-call" class="w-4 h-4"></i> 진학지도부 상담: 055-546-2260
-        </a>
-        <button type="button" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition" onclick="closeModal('admissions-modal')">
+      <div class="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-end flex-shrink-0">
+        <button type="button" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs sm:text-sm transition" onclick="closeModal('admissions-modal')">
           닫기
         </button>
       </div>
