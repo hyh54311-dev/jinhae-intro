@@ -1194,8 +1194,8 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
           <!-- 카드뉴스 이미지 미리보기 & 클릭 팝업 영역 -->
           <div class="md:col-span-5 flex flex-col items-center">
-            <div id="cardnews-inline-stage" class="relative w-full max-w-[300px] aspect-[4/5] bg-white rounded-xl overflow-hidden shadow-md border border-slate-200 group cursor-pointer select-none" onclick="openCardnewsModalCurrent()" title="클릭하여 카드뉴스 크게 보기">
-              <img id="cardnews-viewer-img" src="assets/images/cardnews/card_01_cover.png" alt="진해고 입학홍보 카드뉴스" class="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300" loading="lazy">
+            <div id="cardnews-inline-stage" class="relative w-full max-w-[320px] aspect-square bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 group cursor-pointer select-none" onclick="openCardnewsModalCurrent()" title="클릭하여 카드뉴스 크게 보기">
+              <img id="cardnews-viewer-img" src="assets/images/cardnews/card_ep1_01.png" alt="진해고 입학홍보 카드뉴스 제1편" class="w-full h-full object-contain bg-white transition-transform group-hover:scale-102 duration-300" loading="lazy">
               
               <!-- 호버 시 크게 보기 오버레이 -->
               <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -2665,48 +2665,48 @@
         badge: '제1편 핵심 분석 (총 7장)',
         tabTitle: '제1편. 2028 5등급제 모수',
         title: '2028 대입 개편 5등급제와 300명 대단지 일반고의 압도적 시너지',
-        desc: '2028학년도 5등급제 개편 시 1등급 비율이 상위 10%로 확대됩니다. 학생 수가 적은 소규모 학교는 1등급이 10명에 불과해 1명만 밀려도 1.00%p가 흔들리지만, 진해고는 10학급 300명 정원으로 1등급이 무려 30명까지 확보되어 내신 안정성이 3배 이상 뛰어납니다.',
-        coverImg: 'assets/images/cardnews/card_01_cover.png',
+        desc: '고교학점제에 강한 기숙형 자율학교 진해고! 9등급제에서 5등급제로의 대변혁 속에서 100명 소규모 학교와 달리 진해고는 남학생 10학급 300명 정원으로 1등급 30명, 2등급 102명까지 확보되는 압도적 내신 안전 쿠션을 갖추고 있습니다.',
+        coverImg: 'assets/images/cardnews/card_ep1_01.png',
         points: [
-          '<strong>1등급 30명 확보:</strong> 300명 모수로 1명의 변동 폭이 단 0.33%p에 불과',
-          '<strong>다양한 선택과목 개설:</strong> 학생 수가 많아 소인수 심화 과목도 폐강 없이 안전 개설',
-          '<strong>수능 최저 충족 최적:</strong> 면학 분위기가 잡힌 정독실과 연계하여 수능 최저 충족률 극대화'
+          '<strong>1등급 30명 확보:</strong> 300명 모수로 1등급만 무려 30명! 1명의 변동 폭이 0.33%p에 불과',
+          '<strong>소인수 심화과목 100% 개설:</strong> 단 5명만 신청해도 폐강 없이 전공 심화과목 100% 개설',
+          '<strong>수능 최저 완벽 방어:</strong> 기숙사 동백관·송학관 매일 밤 5시간 10분 집중 자기주도학습'
         ],
         slides: [
           {
-            src: 'assets/images/cardnews/card_01_cover.png',
-            title: '01/07 · 2028 개편 팩트체크',
-            caption: '2028 대입 개편 5등급제, 진짜 수혜를 받는 학교는 따로 있습니다!'
+            src: 'assets/images/cardnews/card_ep1_01.png',
+            title: '01/07 · 표지: 기숙형 자율학교 진해고',
+            caption: '“중학교 땐 잘했는데… 고등학교 가면 내신 무너진다면서요?” 판도가 완전히 바뀌었습니다!'
           },
           {
-            src: 'assets/images/cardnews/card_02_grade5.png',
-            title: '02/07 · 1등급 2.5배 확대',
-            caption: '1등급의 문이 ‘2.5배’ 넓어집니다 (상위 4% → 상위 10%)'
+            src: 'assets/images/cardnews/card_ep1_02.png',
+            title: '02/07 · 1등급의 문, 2.5배 확대',
+            caption: '1등급의 문이 ‘2.5배’ 활짝 넓어졌습니다 (상위 4% → 상위 10%, 2등급은 상위 34%까지)'
           },
           {
-            src: 'assets/images/cardnews/card_03_dorm_care.png',
-            title: '03/07 · 300명 내신 모수 파워',
-            caption: '전교생 수가 적은 학교가 위험한 진짜 이유 (1등급 30명 vs 10명)'
+            src: 'assets/images/cardnews/card_ep1_03.png',
+            title: '03/07 · 300명 중 10%는 무려 30명',
+            caption: '같은 10%라도 300명 중 10%는 무려 30명! 한 번의 실수에도 무너지지 않는 든든한 내신 안전 쿠션'
           },
           {
-            src: 'assets/images/cardnews/card_04_admissions.png',
-            title: '04/07 · 대입 변별력의 핵심',
-            caption: '1등급이 흔해지면, 대학은 ‘심화 선택과목’과 ‘수능 최저’를 봅니다'
+            src: 'assets/images/cardnews/card_ep1_04.png',
+            title: '04/07 · 대학은 반드시 ‘다른 것’을 봅니다',
+            caption: '1등급이 늘어나면 대학은 ‘진로 심화 선택과목 이수 여부’와 ‘수능 최저학력기준 충족’을 봅니다'
           },
           {
-            src: 'assets/images/cardnews/card_05_scholarship.png',
-            title: '05/07 · 기숙형 자율학교 강점',
-            caption: '"그 과목 우리 학교엔 없어요" 진해고에선 듣지 않을 말입니다'
+            src: 'assets/images/cardnews/card_ep1_05.png',
+            title: '05/07 · 소인수 심화과목 100% 개설',
+            caption: '“그 과목 우리 학교엔 없어요” 결코 듣지 않을 말! 단 5명이 신청해도 심화과목 100% 개설'
           },
           {
-            src: 'assets/images/cardnews/card_06_selfstudy.png',
-            title: '06/07 · 기숙사 5시간 자습',
-            caption: '통학 시간 0분, 밤 11:30까지 하루 5시간 10분의 몰입 학습'
+            src: 'assets/images/cardnews/card_ep1_06.png',
+            title: '06/07 · 기숙사 5시간 10분 자습 & 수능최저 방어',
+            caption: '동백관·송학관 스마트폰 유혹 차단 153명 전용 정독실, 하루 5시간 10분 집중 자습으로 수능 방어'
           },
           {
-            src: 'assets/images/cardnews/card_07_qr.png',
-            title: '07/07 · 3중 안전망 & QR',
-            caption: '내신 + 세특 + 수능 3중 안전망, 지금 진해고에 입학 상담하세요'
+            src: 'assets/images/cardnews/card_ep1_07.png',
+            title: '07/07 · 2028 대입 개편 최고의 기회 & QR',
+            caption: '원서접수: 2026. 12. 10.(목) ~ 12. 14.(월) / 스마트폰 카메라로 QR코드를 비추면 AI 챗봇 연결'
           }
         ]
       },
@@ -3554,7 +3554,7 @@
           <i data-lucide="chevron-left" class="w-6 h-6"></i>
         </button>
 
-        <img id="card-modal-img" src="assets/images/cardnews/card_01_cover.png" alt="카드뉴스 확대 이미지" class="max-w-full max-h-[60vh] sm:max-h-[66vh] object-contain rounded-xl shadow-md border border-slate-200 transition-opacity duration-150" style="max-height: 60dvh;" draggable="false">
+        <img id="card-modal-img" src="assets/images/cardnews/card_ep1_01.png" alt="카드뉴스 확대 이미지" class="max-w-full max-h-[60vh] sm:max-h-[66vh] object-contain rounded-xl shadow-md border border-slate-200 transition-opacity duration-150" style="max-height: 60dvh;" draggable="false">
 
         <!-- 우측 다음 장 플로팅 버튼 -->
         <button type="button" onclick="event.stopPropagation(); stepCardnewsModalSlide(1);" class="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/70 hover:bg-slate-900 active:scale-95 text-white flex items-center justify-center shadow-lg border border-white/20 backdrop-blur-xs transition" aria-label="다음 장 보기">
