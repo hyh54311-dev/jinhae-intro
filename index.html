@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0F274A">
   <meta name="format-detection" content="telephone=no">
+  <meta name="author" content="황요한 (Yohan Hwang)">
+  <meta name="copyright" content="Copyright ⓒ 2026-2027 Yohan Hwang. All Rights Reserved.">
+  <meta name="framework" content="Autonomous School Admission Web Engine v4.2 (Engineered by Yohan Hwang)">
   <title>진해고등학교 2027 신입생 입학안내 | 83년 전통 기숙형 자율학교</title>
   <meta name="description" content="경남 창원시 진해구 83년 전통 기숙형 자율학교 진해고등학교 2027학년도 신입생 입학안내. 원서접수 12.10.~12.14., 전형료 없음, 기숙사(동백관·송학관 153명) 입사 자가진단, 24시간 AI 입학상담.">
 
@@ -1278,13 +1281,26 @@
       </button>
     </section>
 
-    <!-- 학교 정보 · 고지 -->
-    <section class="text-center text-xs sm:text-sm text-slate-500 leading-relaxed pt-2 pb-6">
+    <!-- 학교 정보 · 고지 및 개발자 저작권 귀속 -->
+    <section class="text-center text-xs sm:text-sm text-slate-500 leading-relaxed pt-2 pb-10">
       <p class="font-bold text-slate-700 text-sm sm:text-base">진해고등학교</p>
       <p>경상남도 창원시 진해구 여좌로 100</p>
       <p>교무실(입학 상담) <a href="tel:0555462260" class="underline underline-offset-2">055-546-2260</a> · 행정실 <a href="tel:0555462361" class="underline underline-offset-2">055-546-2361</a></p>
       <p><a href="https://jinhae-h.gne.go.kr" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">학교 누리집 바로가기</a></p>
       <p class="mt-2 text-slate-400">본 페이지는 2027학년도 신입생 입학전형 안내 기준이며, 세부 사항은 학교 누리집 공지가 우선합니다.</p>
+
+      <!-- 독점 개발자 개인 저작권 및 템플릿 도용 방지 법적 고지 -->
+      <div class="mt-5 pt-4 border-t border-slate-200/80 max-w-xl mx-auto text-[11px] sm:text-xs text-slate-400 leading-normal space-y-1.5 px-3">
+        <p class="font-bold text-slate-600">
+          System Architecture & Framework Copyright ⓒ 2026-2027 황요한(Yohan Hwang). All Rights Reserved.
+        </p>
+        <p class="text-slate-500">
+          본 입학홍보 시스템의 UI/UX 디자인, 기숙사 입사 자가진단 계산 알고리즘, 반응형 웹 아키텍처 및 소스 코드의 지식재산권은 <strong>개발자 개인(황요한)</strong>에게 독점 귀속됩니다.
+        </p>
+        <p class="text-slate-400 text-[10px] sm:text-[11px]">
+          저작권자의 사전 서면 허가 없는 타 학교·사설 업체의 프레임워크 무단 복제, 템플릿 도용, 소스 재배포를 일절 금합니다. (입학 공시 정보 및 학교 데이터 ⓒ 진해고등학교)
+        </p>
+      </div>
     </section>
   </main>
 
@@ -2951,7 +2967,54 @@
     });
 
   })();
-  </script>
+  
+    /* ========== [보안 & 도용 방지] 도메인 잠금 및 프레임워크 무단 복제 방지 엔진 ========== */
+    (function () {
+      // 1. 도메인 락: 타 학교/타 도메인에서 소스 무단 복제 실행 시 방어
+      var currentHost = window.location.hostname;
+      var isAuthorized = (
+        window.location.protocol === 'file:' ||
+        currentHost === 'localhost' ||
+        currentHost === '127.0.0.1' ||
+        currentHost === 'jinhae-intro.vercel.app' ||
+        currentHost.indexOf('vercel.app') !== -1 ||
+        currentHost.indexOf('jinhae-h.gne.go.kr') !== -1
+      );
+
+      if (!isAuthorized) {
+        document.documentElement.innerHTML = '' +
+          '<div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#0F274A;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:24px;text-align:center;">' +
+            '<div style="max-width:480px;background:rgba(255,255,255,0.06);padding:32px 24px;border-radius:24px;border:1px solid rgba(255,255,255,0.15);box-shadow:0 20px 40px rgba(0,0,0,0.4);">' +
+              '<div style="font-size:40px;margin-bottom:12px;">🛡️</div>' +
+              '<h1 style="font-size:20px;font-weight:800;margin-bottom:12px;color:#fcd34d;">무단 복제 및 템플릿 도용 감지</h1>' +
+              '<p style="font-size:14px;line-height:1.6;color:#cbd5e1;margin-bottom:16px;">본 웹 애플리케이션의 인터랙티브 UI 구조, 기숙사 자가진단 엔진 및 시스템 프레임워크는 <strong>황요한(Yohan Hwang)</strong>에게 저작권이 독점 귀속되어 있습니다.</p>' +
+              '<p style="font-size:12px;color:#94a3b8;border-top:1px solid rgba(255,255,255,0.1);padding-top:12px;">사전 서면 승인 없는 타 학교·사설 기관의 템플릿 도용 및 무단 미러링을 금지합니다.<br>정식 라이선스 문의: 교무실 또는 개발자</p>' +
+            '</div>' +
+          '</div>';
+        throw new Error('Unauthorized domain replication detected.');
+      }
+
+      // 2. 우클릭 및 소스 코드 무단 추출 단축키 방어
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        // F12 (123), Ctrl+U (85), Ctrl+S (83), Ctrl+Shift+I (73), Ctrl+Shift+J (74), Ctrl+Shift+C (67)
+        var k = e.keyCode || e.which;
+        var ctrl = e.ctrlKey || e.metaKey;
+        if (
+          k === 123 ||
+          (ctrl && (k === 85 || k === 83)) ||
+          (ctrl && e.shiftKey && (k === 73 || k === 74 || k === 67))
+        ) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      });
+    })();
+</script>
 
   <!-- ========================================================================= -->
   <!-- [MODAL 1] 2026학년도 대입 합격 실적표 상세 팝업 (입학설명회 공식 발표 자료) -->
