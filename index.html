@@ -9,6 +9,8 @@
   <meta name="author" content="2026학년도 입학업무담당자">
   <meta name="copyright" content="Copyright ⓒ 2026-2027 2026학년도 입학업무담당자. All Rights Reserved.">
   <meta name="framework" content="Autonomous School Admission Web Engine v4.2 (2026학년도 입학업무담당자)">
+    <link rel="canonical" href="https://jinhae-intro.vercel.app">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <title>진해고등학교 2027 신입생 입학안내 | 83년 전통 기숙형 자율학교</title>
   <meta name="description" content="경남 창원시 진해구 83년 전통 기숙형 자율학교 진해고등학교 2027학년도 신입생 입학안내. 원서접수 12.10.~12.14., 전형료 없음, 기숙사(동백관·송학관 153명) 입사 자가진단, 24시간 AI 입학상담.">
 
@@ -2091,7 +2093,7 @@
 
     /* ---------- 8. 공유 (Web Share → 링크 복사 폴백) ---------- */
     $('share-btn').addEventListener('click', function () {
-      var url = location.href.split('#')[0];
+      var url = 'https://jinhae-intro.vercel.app';
       var data = {
         title: '진해고등학교 2027 신입생 입학안내',
         text: '83년 전통 기숙형 자율학교 진해고 입학안내 · 기숙사 입사 자가진단 · 24시간 AI 상담',
@@ -2643,7 +2645,7 @@
         navigator.share({
           title: d.title,
           text: '진해고 숏폼 릴스: ' + d.title,
-          url: window.location.href
+          url: 'https://jinhae-intro.vercel.app'
         }).catch(function () {});
       } else {
         if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -3301,8 +3303,9 @@
         currentHost === 'localhost' ||
         currentHost === '127.0.0.1' ||
         currentHost === 'jinhae-intro.vercel.app' ||
-        currentHost.indexOf('vercel.app') !== -1 ||
-        currentHost.indexOf('jinhae-h.gne.go.kr') !== -1
+        currentHost.endsWith('.jinhae-intro.vercel.app') ||
+        currentHost === 'jinhae-h.gne.go.kr' ||
+        currentHost.endsWith('.gne.go.kr')
       );
 
       if (!isAuthorized) {
