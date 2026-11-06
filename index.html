@@ -1175,19 +1175,19 @@
       <!-- 5편 에피소드 탭 셀렉터 -->
       <div class="tab-scroll flex gap-1.5 overflow-x-auto -mx-1 px-1 pb-2" role="tablist" aria-label="카드뉴스 5편 목록">
         <button type="button" class="cardnews-tab-btn active whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-navy text-white transition shadow-sm" data-ep-idx="0">
-          제1편. 2028 5등급제 모수
+          제1편. 2028 5등급제 모수 (7장)
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-ep-idx="1">
           제2편. 153명 기숙사 케어
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-ep-idx="2">
-          제3편. 연 9,000만 장학금
+          제3편. 연 9,000만 장학·복지 (5장)
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-ep-idx="3">
-          제4편. 대입 성과 투트랙
+          제4편. 숫자로 증명하는 대입실적 (5장)
         </button>
         <button type="button" class="cardnews-tab-btn whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-ep-idx="4">
-          제5편. 2027 전형일정
+          제5편. 300명 모수 & 45개 동아리 (6장)
         </button>
       </div>
 
@@ -2734,61 +2734,126 @@
       },
       {
         epId: 3,
-        badge: '제3편 장학 · 혜택',
-        tabTitle: '제3편. 연 9,000만 장학금',
-        title: '연간 9,000만 원 장학금 혜택 & 창원시 지원 진해인재스쿨 심화 학습',
-        desc: '총동창회 장학금, 애향삼품 장학금, 창원한마음병원 장학금 등 연간 9,000만 원 규모의 든든한 장학 혜택이 학생들의 학업을 뒷받침합니다. 또한 창원시 지원으로 운영되는 진해인재스쿨을 통해 수도권 수준의 수준별 심화 수업과 1:1 맞춤형 컨설팅을 제공합니다.',
-        coverImg: 'assets/images/cardnews/card_05_scholarship.png',
+        badge: '제3편 장학금 & 교육 복지 (총 5장)',
+        tabTitle: '제3편. 연 9,000만 장학·복지 (5장)',
+        title: '진해 1위 장학금! 연간 약 9,000만 원 규모의 맞춤형 장학 & 교육복지',
+        desc: '2024학년도 공식 집행 실적 9,080만 원! 총동창회장학재단, 애향삼품장학회, 창원한마음병원, 안주환 장학금, 진해인재육성장학재단 등 80년 전통의 5대 든든한 후원처와 실질적인 학습·진로 멘토링 프로그램이 학생들의 꿈을 뒷받침합니다.',
+        coverImg: 'assets/images/cardnews/card_ep3_01.png',
         points: [
-          '<strong>연 9,000만 원 장학 혜택:</strong> 중학교 내신 우수 입학생 및 학업 성취 우수자 대상 집중 지급',
-          '<strong>진해인재스쿨 심화반:</strong> 방과 후 및 주말을 활용한 국·영·수 심화 클리닉 운영',
-          '<strong>1:1 대입 컨설팅:</strong> 전문 입시 컨설턴트 및 3학년 진학 지도 교사의 상시 학생부 디자인'
+          '<strong>연 9,080만 원 집행 실적:</strong> 입학 성적 우수, 학업 성취, 글로컬 학우상(상품권·장학금), 교육복지 우선지원',
+          '<strong>실질적 학업 비용 지원:</strong> 공립고 무상교육 위에 도서 구입비, 인강 수강료, 대입 원서비까지 든든하게 지원',
+          '<strong>동문 선배 멘토링 네트워크:</strong> 의료계·법조계·학계·공직·대기업 동문 선배의 진로 강연 및 대입 면접 멘토링'
         ],
         slides: [
           {
-            src: 'assets/images/cardnews/card_05_scholarship.png',
-            title: '제3편 대표 · 연간 9,000만 원 장학 혜택 & 인재스쿨',
-            caption: '총동창회 장학금 및 창원시 지원 진해인재스쿨 심화 학습'
+            src: 'assets/images/cardnews/card_ep3_01.png',
+            title: '01/05 · 표지: 진해 1위 장학금! (장학금 & 교육 복지)',
+            caption: '창원·진해 지역 고등학교 중 단연 독보적인 장학 혜택, 연간 약 9,000만 원 규모의 맞춤형 장학 프로그램'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep3_02.png',
+            title: '02/05 · 연간 9,080만 원 지급 완료 & 5대 든든한 후원처',
+            caption: '총동창회장학재단, 애향삼품장학회, 창원한마음병원, 안주환 장학금, 진해인재육성장학재단 등 80년 전통 동문 파워'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep3_03.png',
+            title: '03/05 · 성적 우수자부터 모범 학생까지 폭넓은 장학 혜택',
+            caption: '입학 성적 우수 장학금, 재학생 학업 성취 장학금, 글로컬 학우상·모범 장학금(상품권·장학금), 교육복지 우선지원'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep3_04.png',
+            title: '04/05 · 고교 무상교육 위에 실질적인 학업 지원까지',
+            caption: '수업료·입학금·교과서비 전액 면제 + 도서 구입비, 인터넷 강의 수강료, 대입 원서비 및 최신 스마트 교실 환경'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep3_05.png',
+            title: '05/05 · 사회 각계각층 동문 선배들의 멘토링 네트워크',
+            caption: '의료계·법조계·학계·공직·대기업 현직 선배에게 직접 듣는 진로 탐색 강연 및 실전 대입 면접 멘토링'
           }
         ]
       },
       {
         epId: 4,
-        badge: '제4편 입시 결실',
-        tabTitle: '제4편. 대입 성과 투트랙',
-        title: '2026학년도 대입 실적: 서울대 1명 · 의약학 4명 · 사관학교 7명',
-        desc: '수시(학생부종합·교과)와 정시(수능) 투트랙 지도로 2026학년도 서울대 1명, 의예과 3명, 치·한·약 1명, 사관학교 7명(해사 6, 육사 1), 연고대 4명, 수도권 주요대 32명, 거점국립대 86명 이상의 압도적인 합격 실적을 거두었습니다.',
-        coverImg: 'assets/images/cardnews/card_04_admissions.png',
+        badge: '제4편 대입 진학 실적 (총 5장)',
+        tabTitle: '제4편. 숫자로 증명하는 대입실적 (5장)',
+        title: '소문이 아닌 숫자로 증명합니다: 진해고등학교 대입 진학 경쟁력',
+        desc: '서울대, 의약학 계열 4명, 연세대·고려대, 사관학교 7명 등 최상위권 진학부터 성균관대·서강대·한양대 등 수도권 주요 명문대 32명, 부산대·경북대 및 과학기술원 등 국공립대 라인 총 114명 합격까지 수시·정시 투트랙의 압도적 성과를 공개합니다.',
+        coverImg: 'assets/images/cardnews/card_ep4_01.png',
         points: [
-          '<strong>의약학 계열 4명 합격:</strong> 의예과 3명 및 치·한·약 1명(본교 공식 집계 기준)',
-          '<strong>해군사관학교 6명 배출:</strong> 해군 도시 진해의 이점을 살린 사관학교 특별 집중 대비반',
-          '<strong>수시 · 정시 균형 진학:</strong> 탄탄한 내신 모수를 기반으로 학생부종합과 수능 최저 동시 석권'
+          '<strong>최상위권 및 수도권 약진:</strong> 서울대·의약학 4명·사관학교 7명·연고대 및 수도권 주요 대학 32명 이상 합격',
+          '<strong>국공립대·과기원 114명 합격:</strong> 부산대·경북대·경상국립대·창원대·부경대 및 과학기술원 등 탄탄한 진학 실적',
+          '<strong>진학 성공 3대 핵심 동력:</strong> 300명 모수의 탄탄한 내신 인프라 + 심야 정독실 수능최저 대비 + 1:1 맞춤형 진학 설계'
         ],
         slides: [
           {
-            src: 'assets/images/cardnews/card_04_admissions.png',
-            title: '제4편 대표 · 2026 대입 수시·정시 투트랙 실적',
-            caption: '서울대 1명 · 의약학 4명 · 사관학교 7명 압도적 진학'
+            src: 'assets/images/cardnews/card_ep4_01.png',
+            title: '01/05 · 표지: 소문이 아닌 숫자로 증명하는 진해고 대입 실적',
+            caption: '합격생들의 땀방울과 공식 데이터로 증명하는 진해고등학교의 진짜 대입 경쟁력'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep4_02.png',
+            title: '02/05 · 최상위권 실적 (서울대 · 의약학 · 연고대 · 사관학교)',
+            caption: '서울대 1명, 의약학 계열 4명, 고려대·연세대, 사관학교 7명 등 최상위권 대학 다수 합격'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep4_03.png',
+            title: '03/05 · 서울·수도권 주요 대학 및 특수목적대 대거 진학',
+            caption: '성균관대, 서강대, 한양대, 중앙대, 경희대, 한국외대, 서울시립대 및 한국교원대·한국해양대 등 맞춤형 진학'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep4_04.png',
+            title: '04/05 · 거점국립대 및 과학기술원 등 국공립 라인 114명 합격',
+            caption: '안정적인 내신 확보와 수능 최저 충족으로 부산대, 경북대, 경상국립대, 창원대 등 국공립 라인 압도적 합격'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep4_05.png',
+            title: '05/05 · 진해고 진학 성공의 3대 핵심 동력',
+            caption: '1. 탄탄한 300명 내신 인프라(1등급 30명) · 2. 심야 자기주도학습 수능최저 대비 · 3. 교무기획부 1:1 맞춤 진학 설계'
           }
         ]
       },
       {
         epId: 5,
-        badge: '제5편 전형 가이드',
-        tabTitle: '제5편. 2027 전형일정',
-        title: '2027학년도 신입생 원서접수: 12.10.(목) 시작 · 전형료 0원',
-        desc: '2027학년도 진해고등학교 신입생 원서접수는 2026년 12월 10일(목) 10:00부터 12월 14일(월) 14:00까지 진행됩니다. 전형료는 전액 무료(0원)이며, 예비소집이나 배치고사 없이 중학교 3년간의 내신 성적(석차백분율) 100%로 공정하게 선발합니다.',
-        coverImg: 'assets/images/cardnews/card_07_qr.png',
+        badge: '제5편 교육과정 & 동아리 (총 6장)',
+        tabTitle: '제5편. 300명 모수 & 45개 동아리 (6장)',
+        title: '2027 입학생을 위한 진해고의 강점: 재학생 300명의 힘 & 45개 전공 동아리',
+        desc: '고교학점제와 5등급제 전환 시대에 예비 고1 학생들이 가장 걱정하는 ‘신청 인원 미달 폐강’과 ‘내신 등급 하락’ 문제를 학년당 300명 규모로 완벽히 해결합니다. 나아가 40여 개의 창체·전공 동아리와 글로컬 학술제로 학종에 강한 명품 학생부를 완성합니다.',
+        coverImg: 'assets/images/cardnews/card_ep5_01.png',
         points: [
-          '<strong>접수 일정:</strong> 2026. 12. 10.(목) 10:00 ~ 12. 14.(월) 14:00 (온라인 시스템)',
-          '<strong>무시험 100% 선발:</strong> 전형료 0원, 배치고사 없음, 중학교 교과내신으로 선발',
-          '<strong>합격자 발표:</strong> 2026. 12. 30.(수) 10:00 / 등록확인서 제출 ~ 2027. 1. 4.(월)'
+          '<strong>폐강 걱정 없는 과목 개설:</strong> 학생 수가 많아 희망 과목이 다양하게 개설되며 공동교육과정까지 완벽 지원',
+          '<strong>150명 학교 대비 1등급 +15명:</strong> 소규모 학교 대비 1등급 인원이 15명 더 많아 내신 등급 확보에 압도적 유리',
+          '<strong>45개 전공 동아리 & 명품 세특:</strong> 공학·의약보건·인문상경·교육·체육 계열별 동아리와 글로컬 학술제로 개별화 학생부 완성'
         ],
         slides: [
           {
-            src: 'assets/images/cardnews/card_07_qr.png',
-            title: '제5편 대표 · 2027학년도 신입생 전형 가이드',
-            caption: '12월 10일 원서접수 개시, 전형료 0원, 무시험 100% 선발'
+            src: 'assets/images/cardnews/card_ep5_01.png',
+            title: '01/06 · 표지: 2027 입학생들을 위한 진해고의 장점!',
+            caption: '300명의 학년별 학생 모수와 40여 개의 전공 맞춤형 동아리가 만드는 압도적 경쟁력'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep5_02.png',
+            title: '02/06 · 재학생 300명의 힘: 걱정을 줄이는 많은 수의 학생',
+            caption: '듣고 싶은 과목 폐강 걱정과 5등급제 내신 등급 불안감을 300명 학년 규모로 확실하게 완화합니다'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep5_03.png',
+            title: '03/06 · 앞의 문제점들을 완화할 수 있던 3단계 구체적 근거',
+            caption: 'STEP 1 대부분의 과목 개설 · STEP 2 150명 학교 대비 1등급 인원 15명 추가 확보 · STEP 3 공동교육과정 실시'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep5_04.png',
+            title: '04/06 · 동아리와 함께하는 진로 개발: 다양한 창체 동아리들',
+            caption: '공학·자연(화생방, 리뉴턴), 의약·보건(의생명 탐구반), 인문·상경(창업), 교육(또래상담), 체육·군사 계열 맞춤 운영'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep5_05.png',
+            title: '05/06 · 다양한 활동과 개별화된 진해고만의 명품 학생부',
+            caption: '과목별 세특과 동아리의 유기적 연결 + 매년 실시되는 글로컬 학술제 탐구로 학생부종합전형에서 독보적 강점 발휘'
+          },
+          {
+            src: 'assets/images/cardnews/card_ep5_06.png',
+            title: '06/06 · 여러분의 미래를 인도해 줄 동반자, 진해고등학교',
+            caption: '학생 개개인의 진로와 미래를 함께 열어가는 진해고등학교 (입학 상담 문의: 교무실 055-546-2260)'
           }
         ]
       }
@@ -3542,11 +3607,11 @@
       <div class="px-3 py-2 bg-slate-100 border-b border-slate-200 flex items-center justify-between gap-1 overflow-x-auto flex-shrink-0">
         <span class="text-[11px] font-extrabold text-slate-500 whitespace-nowrap mr-1">편 선택:</span>
         <div class="flex items-center gap-1">
-          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="0" onclick="switchModalEpisode(0)">제1편 (7장)</button>
+          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="0" onclick="switchModalEpisode(0)">제1편 5등급제(7장)</button>
           <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="1" onclick="switchModalEpisode(1)">제2편 기숙사</button>
-          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="2" onclick="switchModalEpisode(2)">제3편 장학</button>
-          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="3" onclick="switchModalEpisode(3)">제4편 대입</button>
-          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="4" onclick="switchModalEpisode(4)">제5편 전형</button>
+          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="2" onclick="switchModalEpisode(2)">제3편 장학·복지(5장)</button>
+          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="3" onclick="switchModalEpisode(3)">제4편 대입실적(5장)</button>
+          <button type="button" class="modal-ep-btn px-2.5 py-1 rounded-lg text-xs font-bold transition" data-mep-idx="4" onclick="switchModalEpisode(4)">제5편 동아리·학생부(6장)</button>
         </div>
       </div>
 
@@ -3573,9 +3638,9 @@
         <!-- 슬라이드 캡션 / 설명글 -->
         <p id="card-modal-caption" class="text-xs text-slate-700 font-bold text-center truncate max-w-full px-2"></p>
 
-        <!-- 후속편 준비 안내 (2~5편일 때 노출) -->
+        <!-- 후속편 준비 안내 (단일 카드인 제2편 기숙사 편일 때만 노출) -->
         <p id="card-modal-notice" class="text-[11px] text-brand-blue font-bold text-center hidden">
-          ※ 제2편~제5편 상세 슬라이드는 학생 홍보단 제작본으로 순차 업데이트됩니다.
+          ※ 제2편(기숙사 동백관·송학관) 상세 슬라이드는 실제 기숙사 촬영 사진 반영 후 업데이트됩니다.
         </p>
 
         <!-- 터치 스와이프 안내 문구 -->
